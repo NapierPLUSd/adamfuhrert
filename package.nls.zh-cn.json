@@ -2,6 +2,7 @@
   "global.ibiz-modeling-studio.title": "iBiz建模工场",
   "command.ibiz-modeling-studio.category": "iBiz建模工场",
   "command.ibiz-modeling-studio.user.login": "登录",
+  "command.ibiz-modeling-studio.user.logout": "登出",
   "command.ibiz-modeling-studio.open-ibiz-modeling": "打开 iBizModeling 工具",
   "command.ibiz-modeling-studio.system-info-terminal.show": "打开信息终端",
   "command.ibiz-modeling-studio.system.publish.code": "发布代码",

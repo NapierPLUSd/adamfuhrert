@@ -4,7 +4,7 @@
   "description": "iBiz建模工场",
   "publisher": "ibizlab",
   "preview": true,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.62.0"
   },
@@ -25,6 +25,11 @@
       {
         "command": "ibiz-modeling-studio.user.login",
         "title": "%command.ibiz-modeling-studio.user.login%",
+        "category": "%command.ibiz-modeling-studio.category%"
+      },
+      {
+        "command": "ibiz-modeling-studio.user.logout",
+        "title": "%command.ibiz-modeling-studio.user.logout%",
         "category": "%command.ibiz-modeling-studio.category%"
       },
       {

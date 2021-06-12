@@ -10,6 +10,7 @@ import { SystemInfoTerminalShowCommand } from './system-info-terminal/show';
 import { SystemPublishCommand } from './system/publish';
 import { TemplatePublishCommand } from './template/publish';
 import { UserLoginCommand } from './user/login';
+import { UserLogoutCommand } from './user/logout';
 
 /**
  * 安装命令处理程序
@@ -34,4 +35,5 @@ export function installCommands(_context: ExtensionContext): void {
   new SystemInfoTerminalShowCommand();
   new TemplatePublishCommand();
   new UserLoginCommand();
+  new UserLogoutCommand();
 }

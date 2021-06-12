@@ -3,19 +3,19 @@ import { CommandConst } from '../../constants';
 import { login } from '../../service';
 
 /**
- * 用户登录
+ * 用户登出
  *
  * @author chitanda
- * @date 2021-12-08 15:12:46
+ * @date 2021-12-08 15:12:52
  * @export
- * @class UserLoginCommand
+ * @class UserLogoutCommand
  */
-export class UserLoginCommand {
+export class UserLogoutCommand {
   constructor() {
-    commands.registerCommand(CommandConst.USER.LOGIN, this.execute.bind(this));
+    commands.registerCommand(CommandConst.USER.LOGOUT, this.execute.bind(this));
   }
 
   protected async execute(): Promise<void> {
-    login.login();
+    login.logout();
   }
 }

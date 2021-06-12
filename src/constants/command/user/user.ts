@@ -16,6 +16,13 @@ export class UserConst {
    */
   readonly LOGIN = 'ibiz-modeling-studio.user.login';
   /**
+   * 用户登出
+   *
+   * @author chitanda
+   * @date 2021-12-08 15:12:42
+   */
+  readonly LOGOUT = 'ibiz-modeling-studio.user.logout';
+  /**
    * 登录回转地址处理
    *
    * @author chitanda

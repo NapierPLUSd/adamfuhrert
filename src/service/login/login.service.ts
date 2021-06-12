@@ -162,6 +162,19 @@ export class LoginService {
   }
 
   /**
+   * 登出当前用户
+   *
+   * @author chitanda
+   * @date 2021-12-08 15:12:35
+   * @return {*}  {Promise<boolean>}
+   */
+  async logout(): Promise<boolean> {
+    ctx.setToken('');
+    window.showInformationMessage('已登出当前用户');
+    return true;
+  }
+
+  /**
    * 未登录时调用，根据状态进行登录操作
    *
    * @author chitanda
