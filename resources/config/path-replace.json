@@ -1,0 +1,364 @@
+{
+  "PSSYSTEM": {
+    "psmodules": { "caption": "模块", "psmodeltype": "PSMODULE" },
+    "pscodelists": { "caption": "代码表", "psmodeltype": "PSCODELIST" },
+    "pssysermaps": { "caption": "ER图", "psmodeltype": "PSSYSERMAP" },
+    "pssysdbschemes": { "caption": "数据库", "psmodeltype": "PSSYSDBSCHEME" },
+    "pssysbdschemes": { "caption": "大数据", "psmodeltype": "PSSYSBDSCHEME" },
+    "pssyssearchschemes": { "caption": "全文检索", "psmodeltype": "PSSYSSEARCHSCHEME" },
+    "pssysucmaps": { "caption": "用例", "psmodeltype": "PSSYSUCMAP" },
+    "pssysunireses": { "caption": "统一资源", "psmodeltype": "PSSYSUNIRES" },
+    "pssysusermodes": { "caption": "用户模式", "psmodeltype": "PSSYSUSERMODE" },
+    "pssysopprivs": { "caption": "系统角色", "psmodeltype": "PSSYSOPPRIV" },
+    "pssysuserdrs": { "caption": "自定义数据范围", "psmodeltype": "PSSYSUSERDR" },
+    "pssysapps": { "caption": "前端应用", "psmodeltype": "PSSYSAPP" },
+    "pssysserviceapis": { "caption": "服务接口", "psmodeltype": "PSSYSSERVICEAPI" },
+    "pssyssfpubs": { "caption": "后台架构", "psmodeltype": "PSSYSSFPUB" },
+    "pssyscsses": { "caption": "界面样式表", "psmodeltype": "PSSYSCSS" },
+    "pssysimages": { "caption": "图片资源", "psmodeltype": "PSSYSIMAGE" },
+    "psdeuiactions": { "caption": "全局界面行为", "psmodeltype": "PSDEUIACTION" },
+    "psdeuagroups": { "caption": "全局界面行为组", "psmodeltype": "PSDEUAGROUP" },
+    "psdetoolbars": { "caption": "全局工具栏", "psmodeltype": "PSDETOOLBAR" },
+    "pssysportlets": { "caption": "门户部件", "psmodeltype": "PSSYSPORTLET" },
+    "psachandlers": { "caption": "全局界面处理", "psmodeltype": "PSACHANDLER" },
+    "pssyscounters": { "caption": "计数器", "psmodeltype": "PSSYSCOUNTER" },
+    "pssysviewpanels": { "caption": "视图布局面板", "psmodeltype": "PSSYSVIEWPANEL" },
+    "psviewmsgs": { "caption": "视图消息", "psmodeltype": "PSVIEWMSG" },
+    "psviewmsggroups": { "caption": "视图消息组", "psmodeltype": "PSVIEWMSGGROUP" },
+    "psworkflows": { "caption": "工作流", "psmodeltype": "PSWORKFLOW" },
+    "pswfroles": { "caption": "工作流角色", "psmodeltype": "PSWFROLE" },
+    "pswfworktimes": { "caption": "工作流时间", "psmodeltype": "PSWFWORKTIME" },
+    "pssysmodelgroups": { "caption": "模型组", "psmodeltype": "PSSYSMODELGROUP" },
+    "pssysrefs": { "caption": "子系统", "psmodeltype": "PSSYSREF" },
+    "pssyspfplugins": { "caption": "前端模板插件", "psmodeltype": "PSSYSPFPLUGIN" },
+    "pssyssfplugins": { "caption": "后台模板插件", "psmodeltype": "PSSYSSFPLUGIN" },
+    "pssyseditorstyles": { "caption": "编辑器样式", "psmodeltype": "PSSYSEDITORSTYLE" },
+    "pssysdelogicnodes": { "caption": "逻辑处理组件", "psmodeltype": "PSSYSDELOGICNODE" },
+    "pssysdynamodels": { "caption": "动态模型", "psmodeltype": "PSSYSDYNAMODEL" },
+    "pssysvaluerules": { "caption": "值规则", "psmodeltype": "PSSYSVALUERULE" },
+    "pssubsysserviceapis": { "caption": "外部接口", "psmodeltype": "PSSUBSYSSERVICEAPI" },
+    "pssysresources": { "caption": "资源", "psmodeltype": "PSSYSRESOURCE" },
+    "psdegroups": { "caption": "实体组", "psmodeltype": "PSDEGROUP" },
+    "psdergroups": { "caption": "关系组", "psmodeltype": "PSDERGROUP" },
+    "pssysmsgtempls": { "caption": "消息模板", "psmodeltype": "PSSYSMSGTEMPL" },
+    "pssysutildes": { "caption": "功能配置", "psmodeltype": "PSSYSUTILDE" },
+    "pssysdeftypes": { "caption": "属性类型逻辑", "psmodeltype": "PSSYSDEFTYPE" },
+    "pssystestdata": { "caption": "测试数据", "psmodeltype": "PSSYSTESTDATA" },
+    "pssystestprjs": { "caption": "测试项目", "psmodeltype": "PSSYSTESTPRJ" },
+    "pssysunits": { "caption": "单位", "psmodeltype": "PSSYSUNIT" }
+  },
+  "PSMODULE": {
+    "psdataentities": { "caption": "实体", "psmodeltype": "PSDATAENTITY" },
+    "pscodelists": { "caption": "代码表", "psmodeltype": "PSCODELIST" },
+    "pssysermaps": { "caption": "ER图", "psmodeltype": "PSSYSERMAP" },
+    "pssysdbschemes": { "caption": "数据库", "psmodeltype": "PSSYSDBSCHEME" },
+    "pssysbdschemes": { "caption": "大数据", "psmodeltype": "PSSYSBDSCHEME" },
+    "pssyssearchschemes": { "caption": "全文检索", "psmodeltype": "PSSYSSEARCHSCHEME" },
+    "pssysucmaps": { "caption": "用例", "psmodeltype": "PSSYSUCMAP" },
+    "pssysunireses": { "caption": "统一资源", "psmodeltype": "PSSYSUNIRES" },
+    "pssysusermodes": { "caption": "用户模式", "psmodeltype": "PSSYSUSERMODE" },
+    "pssysopprivs": { "caption": "系统角色", "psmodeltype": "PSSYSOPPRIV" },
+    "pssysuserdrs": { "caption": "自定义数据范围", "psmodeltype": "PSSYSUSERDR" },
+    "pssysapps": { "caption": "前端应用", "psmodeltype": "PSSYSAPP" },
+    "pssysserviceapis": { "caption": "服务接口", "psmodeltype": "PSSYSSERVICEAPI" },
+    "pssyscsses": { "caption": "界面样式表", "psmodeltype": "PSSYSCSS" },
+    "pssysimages": { "caption": "图片资源", "psmodeltype": "PSSYSIMAGE" },
+    "psdeuiactions": { "caption": "全局界面行为", "psmodeltype": "PSDEUIACTION" },
+    "psdeuagroups": { "caption": "全局界面行为组", "psmodeltype": "PSDEUAGROUP" },
+    "psdetoolbars": { "caption": "全局工具栏", "psmodeltype": "PSDETOOLBAR" },
+    "pssysportlets": { "caption": "门户部件", "psmodeltype": "PSSYSPORTLET" },
+    "psachandlers": { "caption": "全局界面处理", "psmodeltype": "PSACHANDLER" },
+    "pssyscounters": { "caption": "计数器", "psmodeltype": "PSSYSCOUNTER" },
+    "pssysviewpanels": { "caption": "视图部件面板", "psmodeltype": "PSSYSVIEWPANEL" },
+    "psviewmsg": { "caption": "视图消息", "psmodeltype": "PSVIEWMSG" },
+    "psviewmsggroups": { "caption": "视图消息组", "psmodeltype": "PSVIEWMSGGROUP" },
+    "psworkflows": { "caption": "工作流", "psmodeltype": "PSWORKFLOW" },
+    "pswfroles": { "caption": "工作流角色", "psmodeltype": "PSWFROLE" },
+    "pswfworktimes": { "caption": "工作流时间", "psmodeltype": "PSWFWORKTIME" },
+    "pssyspfplugins": { "caption": "前端模板插件", "psmodeltype": "PSSYSPFPLUGIN" },
+    "pssyssfplugins": { "caption": "后台模板插件", "psmodeltype": "PSSYSSFPLUGIN" },
+    "pssyseditorstyles": { "caption": "编辑器样式", "psmodeltype": "PSSYSEDITORSTYLE" },
+    "pssysdelogicnodes": { "caption": "逻辑处理组件", "psmodeltype": "PSSYSDELOGICNODE" },
+    "pssysdynamodels": { "caption": "动态模型", "psmodeltype": "PSSYSDYNAMODEL" },
+    "pssysvaluerules": { "caption": "值规则", "psmodeltype": "PSSYSVALUERULE" },
+    "pssubsysserviceapis": { "caption": "外部接口", "psmodeltype": "PSSUBSYSSERVICEAPI" },
+    "pssyscontentcats": { "caption": "内容分类", "psmodeltype": "PSSYSCONTENTCAT" },
+    "pssysresources": { "caption": "资源", "psmodeltype": "PSSYSRESOURCE" },
+    "psdegroups": { "caption": "实体组", "psmodeltype": "PSDEGROUP" },
+    "psdergroups": { "caption": "关系组", "psmodeltype": "PSDERGROUP" },
+    "pssysmsgtempls": { "caption": "消息模板", "psmodeltype": "PSSYSMSGTEMPL" },
+    "pssysbackservices": { "caption": "后台作业", "psmodeltype": "PSSYSBACKSERVICE" },
+    "pssystestprjs": { "caption": "测试项目", "psmodeltype": "PSSYSTESTPRJ" },
+    "pssysunits": { "caption": "单位", "psmodeltype": "PSSYSUNIT" }
+  },
+  "PSDATAENTITY": {
+    "psdefields": { "caption": "属性", "psmodeltype": "PSDEFIELD" },
+    "majorpsders": { "caption": "主关系", "psmodeltype": "PSDER" },
+    "minorpsders": { "caption": "从关系", "psmodeltype": "PSDER" },
+    "pscodelists": { "caption": "代码表", "psmodeltype": "PSCODELIST" },
+    "psdedbcfgs": { "caption": "数据库配置", "psmodeltype": "PSDEDBCFG" },
+    "psdedbindexs": { "caption": "数据库索引", "psmodeltype": "PSDEDBINDEX" },
+    "pssysdmitems": { "caption": "数据库结构", "psmodeltype": "PSSYSDMITEM" },
+    "pssyssearchdes": { "caption": "全文检索", "psmodeltype": "PSSYSSEARCHDE" },
+    "pssysbdtables": { "caption": "大数据", "psmodeltype": "PSSYSBDTABLE" },
+    "psdeactions": { "caption": "行为", "psmodeltype": "PSDEACTION" },
+    "psdelogics": { "caption": "处理逻辑", "psmodeltype": "PSDELOGIC" },
+    "psdedataqueries": { "caption": "数据查询", "psmodeltype": "PSDEDATAQUERY" },
+    "psdedatasets": { "caption": "数据集合", "psmodeltype": "PSDEDATASET" },
+    "psdeacmodes": { "caption": "自填模式", "psmodeltype": "PSDEACMODE" },
+    "psdeactionlogics": { "caption": "行为附加逻辑", "psmodeltype": "PSDEACTIONLOGIC" },
+    "dstpsdeactionlogics": { "caption": "行为附加逻辑（外）", "psmodeltype": "PSDEACTIONLOGIC" },
+    "srcpsdemaps": { "caption": "映射", "psmodeltype": "PSDEMAP" },
+    "psdefsfitems": { "caption": "搜索项", "psmodeltype": "PSDEFSFITEM" },
+    "psdefvaluerules": { "caption": "值规则", "psmodeltype": "PSDEFVALUERULE" },
+    "psdemainstates": { "caption": "主状态", "psmodeltype": "PSDEMAINSTATE" },
+    "psdedataexps": { "caption": "数据导出", "psmodeltype": "PSDEDATAEXP" },
+    "psdedatasyncs": { "caption": "数据同步", "psmodeltype": "PSDEDATASYNC" },
+    "psdedataimps": { "caption": "数据导入", "psmodeltype": "PSDEDATAIMP" },
+    "psdenotifies": { "caption": "实体通知", "psmodeltype": "PSDENOTIFY" },
+    "psdtsqueues": { "caption": "分布事务队列", "psmodeltype": "PSDEDTSQUEUE" },
+    "psdeforms": { "caption": "表单", "psmodeltype": "PSDEFORM" },
+    "psdegrids": { "caption": "表格", "psmodeltype": "PSDEGRID" },
+    "psdetreeviews": { "caption": "树视图", "psmodeltype": "PSDETREEVIEW" },
+    "psdecharts": { "caption": "图表", "psmodeltype": "PSDECHART" },
+    "psdelists": { "caption": "列表", "psmodeltype": "PSDELIST" },
+    "psdedataviews": { "caption": "卡片", "psmodeltype": "PSDEDATAVIEW" },
+    "psdetoolbars": { "caption": "工具栏", "psmodeltype": "PSDETOOLBAR" },
+    "pssysdashboards": { "caption": "数据看板", "psmodeltype": "PSSYSDASHBOARD" },
+    "pssysportlets": { "caption": "看板部件", "psmodeltype": "PSSYSPORTLET" },
+    "psachandlers": { "caption": "界面处理", "psmodeltype": "PSACHANDLER" },
+    "psdeviewbases": { "caption": "视图", "psmodeltype": "PSDEVIEWBASE" },
+    "pssysviewpanels": { "caption": "面板", "psmodeltype": "PSSYSVIEWPANEL" },
+    "pssysmapviews": { "caption": "地图", "psmodeltype": "PSSYSMAPVIEW" },
+    "pssyscalendars": { "caption": "日历", "psmodeltype": "PSSYSCALENDAR" },
+    "pssyssearchbars": { "caption": "搜索栏", "psmodeltype": "PSSYSSEARCHBAR" },
+    "psdedatarelations": { "caption": "关系界面组", "psmodeltype": "PSDEDATARELATION" },
+    "psdedrgroups": { "caption": "关系界面分组", "psmodeltype": "PSDEDRGROUP" },
+    "psdedritems": { "caption": "关系界面", "psmodeltype": "PSDEDRITEM" },
+    "psdeuilogics": { "caption": "界面逻辑", "psmodeltype": "PSDELOGIC" },
+    "psctrllogicgroups": { "caption": "界面逻辑组", "psmodeltype": "PSCTRLLOGICGROUP" },
+    "psdeuiactions": { "caption": "界面行为", "psmodeltype": "PSDEUIACTION" },
+    "psdeuagroups": { "caption": "界面行为组", "psmodeltype": "PSDEUAGROUP" },
+    "pssyscounters": { "caption": "计数器", "psmodeltype": "PSSYSCOUNTER" },
+    "psdewizards": { "caption": "向导", "psmodeltype": "PSDEWIZARD" },
+    "psdefuimodes": { "caption": "属性界面模式", "psmodeltype": "PSDEFFORMITEM" },
+    "pswfdes": { "caption": "工作流实体", "psmodeltype": "PSWFDE" },
+    "psdeprints": { "caption": "打印", "psmodeltype": "PSDEPRINT" },
+    "psdereports": { "caption": "报表", "psmodeltype": "PSDEREPORT" },
+    "psdeutildes": { "caption": "功能配置", "psmodeltype": "PSDEUTILDE" },
+    "psdeserviceapis": { "caption": "服务实体", "psmodeltype": "PSDESERVICEAPI" },
+    "psapplocaldes": { "caption": "应用实体", "psmodeltype": "PSAPPLOCALDE" },
+    "psdeopprivs": { "caption": "操作标识", "psmodeltype": "PSDEOPPRIV" },
+    "psdeuserroles": { "caption": "操作角色", "psmodeltype": "PSDEUSERROLE" },
+    "pshelparticles": { "caption": "帮助文章", "psmodeltype": "PSHELPARTICLE" },
+    "pssystasks": { "caption": "开发任务", "psmodeltype": "PSSYSTASK" },
+    "pslanguageres": { "caption": "语言资源", "psmodeltype": "PSLANGUAGERES" },
+    "psdesampledata": { "caption": "示例数据", "psmodeltype": "PSDESAMPLEDATA" },
+    "pssystestdatas": { "caption": "测试数据", "psmodeltype": "PSSYSTESTDATA" },
+    "pssystestcases": { "caption": "测试用例", "psmodeltype": "PSSYSTESTCASE" },
+    "psdefgroups": { "caption": "属性组", "psmodeltype": "PSDEFGROUP" },
+    "psdergroups": { "caption": "关系组", "psmodeltype": "PSDERGROUP" },
+    "psdegroups": { "caption": "实体组", "psmodeltype": "PSDEGROUP" },
+    "psdeactiongroups": { "caption": "行为组", "psmodeltype": "PSDEACTIONGROUP" }
+  },
+  "PSDEFIELD": {
+    "psdefdtcols": { "caption": "数据库", "psmodeltype": "PSDEFDTCOL" },
+    "psdefvaluerules": { "caption": "值规则", "psmodeltype": "PSDEFVALUERULE" },
+    "psdefsfitems": { "caption": "搜索模式", "psmodeltype": "PSDEFSFITEM" },
+    "psdefuimodes": { "caption": "界面模式", "psmodeltype": "PSDEFFORMITEM" },
+    "psdefinputtips": { "caption": "输入提示", "psmodeltype": "PSDEFINPUTTIP" },
+    "pssyssearchdefields": { "caption": "全文检索", "psmodeltype": "PSSYSSEARCHDEFIELD" },
+    "pssystestcases": { "caption": "值规则测试用例", "psmodeltype": "PSSYSTESTCASE" },
+    "pshelpsections": { "caption": "帮助章节", "psmodeltype": "PSHELPSECTION" },
+    "psdefields": { "caption": "关系属性", "psmodeltype": "PSDEFIELD" }
+  },
+  "PSDER": {
+    "psdedritems": { "caption": "关系界面", "psmodeltype": "PSDEDRITEM" },
+    "psdefields": { "caption": "关系属性", "psmodeltype": "PSDEFIELD" },
+    "psderdefmaps": { "caption": "属性值映射", "psmodeltype": "PSDERDEFMAP" },
+    "psdeopprivs": { "caption": "操作标识映射", "psmodeltype": "PSDEOPPRIV" }
+  },
+  "PSAPPLOCALDE": {
+    "psappviews": { "caption": "应用视图", "psmodeltype": "PSAPPVIEW" }
+  },
+  "PSAPPMODULE": {
+    "psappviews": { "caption": "应用视图", "psmodeltype": "PSAPPVIEW" },
+    "psapplocaldes": { "caption": "应用实体", "psmodeltype": "PSAPPLOCALDE" }
+  },
+  "PSAPPWF": {
+    "psappwfvers": { "caption": "版本", "psmodeltype": "PSAPPWFVER" }
+  },
+  "PSCODELIST": {
+    "pscodeitems": { "caption": "代码项", "psmodeltype": "PSCODEITEM" }
+  },
+  "PSCTRLLOGICGROUP": {
+    "psctrllogicgrpdetails": { "caption": "组成员", "psmodeltype": "PSCTRLLOGICGRPDETAIL" }
+  },
+  "PSCTRLMSG": {
+    "psctrlmsgitems": { "caption": "消息项", "psmodeltype": "PSCTRLMSGITEM" }
+  },
+  "PSDEACTION": {
+    "psdeactionparams": { "caption": "行为参数", "psmodeltype": "PSDEACTIONPARAM" },
+    "psdeactionlogics": { "caption": "附加逻辑", "psmodeltype": "PSDEACTIONLOGIC" },
+    "psdeactionvrs": { "caption": "参数值规则", "psmodeltype": "PSDEACTIONVR" },
+    "pssystestcases": { "caption": "测试用例", "psmodeltype": "PSSYSTESTCASE" }
+  },
+  "PSDEDBINDEX": {
+    "psdedbidxfields": { "caption": "索引列", "psmodeltype": "PSDEDBIDXFIELD" }
+  },
+  "PSDEDATAIMP": {
+    "psdedataimpitems": { "caption": "导入项", "psmodeltype": "PSDEDATAIMPITEM" }
+  },
+  "PSDEDATARELATION": {
+    "psdedrdetails": { "caption": "关系成员", "psmodeltype": "PSDEDRDETAIL" }
+  },
+  "PSDEDATASET": {
+    "psdedsdqs": { "caption": "查询项", "psmodeltype": "PSDEDSDQ" }
+  },
+  "PSDEFGROUP": {
+    "psdefgroupdetails": { "caption": "组成员", "psmodeltype": "PSDEFGROUPDETAIL" }
+  },
+  "PSDEMAINSTATE": {
+    "psdemsactions": { "caption": "控制行为", "psmodeltype": "PSDEMSACTION" },
+    "psdemsopprivs": { "caption": "控制访问标识", "psmodeltype": "PSDEMSOPPRIV" }
+  },
+  "PSDEMAP": {
+    "psdemapdetails": { "caption": "属性映射", "psmodeltype": "PSDEMAPDETAIL" },
+    "psdemapactions": { "caption": "行为映射", "psmodeltype": "PSDEMAPACTION" },
+    "psdemapds": { "caption": "数据集合映射", "psmodeltype": "PSDEMAPDS" },
+    "psdemapdqs": { "caption": "数据查询映射", "psmodeltype": "PSDEMAPDQ" }
+  },
+  "PSDERGROUP": {
+    "psdergroupdetails": { "caption": "组成员", "psmodeltype": "PSDERGROUPDETAIL" }
+  },
+  "PSDEREPORT": {
+    "psderepitems": { "caption": "子报表", "psmodeltype": "PSDEREPITEM" }
+  },
+  "PSDESERVICEAPI": {
+    "psdesadetails": { "caption": "方法", "psmodeltype": "PSDESADETAIL" },
+    "minorpsdesarss": { "caption": "从关系", "psmodeltype": "PSDESARS" },
+    "psdesavrs": { "caption": "值规则", "psmodeltype": "PSDESAVR" },
+    "majorpsdesarss": { "caption": "主关系", "psmodeltype": "PSDESARS" },
+    "pssystestcases": { "caption": "测试用例", "psmodeltype": "PSSYSTESTCASE" }
+  },
+  "PSDEUAGROUP": {
+    "psdeuagrpdetails": { "caption": "组成员", "psmodeltype": "PSDEUAGRPDETAIL" }
+  },
+  "PSDEUSERROLE": {
+    "psdeopprivroles": { "caption": "操作控制", "psmodeltype": "PSDEOPPRIVROLE" }
+  },
+  "PSLANGUAGERES": {
+    "pslanguageitems": { "caption": "资源项", "psmodeltype": "PSLANGUAGEITEM" }
+  },
+  "PSSUBSYSSADE": {
+    "pssubsyssadefields": { "caption": "属性", "psmodeltype": "PSSUBSYSSADEFIELD" },
+    "majorpssubsyssaderss": { "caption": "主关系", "psmodeltype": "PSSUBSYSSADERS" },
+    "minorpssubsyssaderss": { "caption": "从关系", "psmodeltype": "PSSUBSYSSADERS" },
+    "pssubsyssadetails": { "caption": "行为", "psmodeltype": "PSSUBSYSSADETAIL" }
+  },
+  "PSSUBSYSSERVICEAPI": {
+    "pssubsyssades": { "caption": "接口实体", "psmodeltype": "PSSUBSYSSADE" },
+    "pssubsyssaderss": { "caption": "接口实体关系", "psmodeltype": "PSSUBSYSSADERS" }
+  },
+  "PSSYSAPP": {
+    "psappmodules": { "caption": "应用模块", "psmodeltype": "PSAPPMODULE" },
+    "psappviews": { "caption": "应用视图", "psmodeltype": "PSAPPVIEW" },
+    "psappfuncs": { "caption": "应用功能", "psmodeltype": "PSAPPFUNC" },
+    "psappmenus": { "caption": "应用菜单", "psmodeltype": "PSAPPMENU" },
+    "psapputilpages": { "caption": "功能视图", "psmodeltype": "PSAPPUTILPAGE" },
+    "psapppdtviews": { "caption": "预置视图", "psmodeltype": "PSAPPPDTVIEW" },
+    "psappresources": { "caption": "资源", "psmodeltype": "PSAPPRESOURCE" },
+    "psappportlets": { "caption": "看板部件", "psmodeltype": "PSAPPPORTLET" },
+    "psappstoryboards": { "caption": "故事板", "psmodeltype": "PSAPPSTORYBOARD" },
+    "psappuithemes": { "caption": "界面主题", "psmodeltype": "PSAPPUITHEME" },
+    "psapplans": { "caption": "多语言", "psmodeltype": "PSAPPLAN" },
+    "psapplocaldes": { "caption": "应用实体", "psmodeltype": "PSAPPLOCALDE" },
+    "psmobappstartpages": { "caption": "移动端资源", "psmodeltype": "PSMOBAPPSTARTPAGE" },
+    "psappuistyles": { "caption": "界面模式", "psmodeltype": "PSAPPUISTYLE" },
+    "psappwfs": { "caption": "应用工作流", "psmodeltype": "PSAPPWF" },
+    "psapputils": { "caption": "功能配置", "psmodeltype": "PSAPPUTIL" },
+    "psapppkgs": { "caption": "组件包", "psmodeltype": "PSAPPPKG" },
+    "pssystasks": { "caption": "开发任务", "psmodeltype": "PSSYSTASK" },
+    "pssystestprjs": { "caption": "测试项目", "psmodeltype": "PSSYSTESTPRJ" }
+  },
+  "PSSYSBDSCHEME": {
+    "pssysbdmodules": { "caption": "模块", "psmodeltype": "PSSYSBDMODULE" },
+    "pssysbdparts": { "caption": "数据分区", "psmodeltype": "PSSYSBDPART" },
+    "pssysbdtables": { "caption": "数据表", "psmodeltype": "PSSYSBDTABLE" },
+    "pssysbdtablerses": { "caption": "数据表关系", "psmodeltype": "PSSYSBDTABLERS" }
+  },
+  "PSSYSBDTABLE": {
+    "pssysbdtabledes": { "caption": "数据表实体", "psmodeltype": "PSSYSBDTABLEDE" },
+    "pssysbdcolsets": { "caption": "列族", "psmodeltype": "PSSYSBDCOLSET" },
+    "pssysbdcolumns": { "caption": "数据列", "psmodeltype": "PSSYSBDCOLUMN" }
+  },
+  "PSSYSCONTENTCAT": {
+    "pssyscontentcats": { "caption": "子分类", "psmodeltype": "PSSYSCONTENTCAT" },
+    "pssyscontents": { "caption": "内容", "psmodeltype": "PSSYSCONTENT" }
+  },
+  "PSSYSCOUNTER": {
+    "pssyscounteritems": { "caption": "计数项", "psmodeltype": "PSSYSCOUNTERITEM" }
+  },
+  "PSSYSDBSCHEME": {
+    "pssysdbtables": { "caption": "数据表", "psmodeltype": "PSSYSDBTABLE" }
+  },
+  "PSSYSDBTABLE": {
+    "pssysdbcolumns": { "caption": "数据列", "psmodeltype": "PSSYSDBCOLUMN" }
+  },
+  "PSSYSMODELGROUP": {
+    "psmodules": { "caption": "模块", "psmodeltype": "PSMODULE" }
+  },
+  "PSSYSOPPRIV": {
+    "pssysuserrolereses": { "caption": "统一资源", "psmodeltype": "PSSYSUSERROLERES" },
+    "pssysuserroledatas": { "caption": "实体角色", "psmodeltype": "PSSYSUSERROLEDATA" }
+  },
+  "PSSYSPFPLUGIN": {
+    "pssyspfpitempls": { "caption": "插件模板", "psmodeltype": "PSSYSPFPITEMPL" }
+  },
+  "PSSYSREF": {
+    "psmodules": { "caption": "模块", "psmodeltype": "PSMODULE" }
+  },
+  "PSSYSSFPLUGIN": {
+    "pssyssfpitempls": { "caption": "插件模板", "psmodeltype": "PSSYSSFPITEMPL" }
+  },
+  "PSSYSSFPUB": {
+    "pssyssfpubs": { "caption": "子体系", "psmodeltype": "PSSYSSFPUB" },
+    "pssyssfpubpkgs": { "caption": "组件包", "psmodeltype": "PSSYSSFPUBPKG" }
+  },
+  "PSSYSSEARCHDE": {
+    "pssyssearchdefields": { "caption": "检索属性", "psmodeltype": "PSSYSSEARCHDEFIELD" }
+  },
+  "PSSYSSEARCHDOC": {
+    "pssyssearchfields": { "caption": "检索属性", "psmodeltype": "PSSYSSEARCHFIELD" },
+    "pssyssearchdes": { "caption": "检索实体", "psmodeltype": "PSSYSSEARCHDE" }
+  },
+  "PSSYSSEARCHSCHEME": {
+    "pssyssearchdocs": { "caption": "检索文档", "psmodeltype": "PSSYSSEARCHDOC" },
+    "pssyssearchdes": { "caption": "检索实体", "psmodeltype": "PSSYSSEARCHDE" }
+  },
+  "PSSYSSERVICEAPI": {
+    "psdeserviceapis": { "caption": "实体接口", "psmodeltype": "PSDESERVICEAPI" },
+    "psdesarses": { "caption": "接口关系", "psmodeltype": "PSDESARS" },
+    "pssystestprjs": { "caption": "测试项目", "psmodeltype": "PSSYSTESTPRJ" }
+  },
+  "PSSYSTESTDATA": {
+    "pssystditems": { "caption": "数据项", "psmodeltype": "PSSYSTDITEM" }
+  },
+  "PSSYSTESTMODULE": {
+    "pssystestcases": { "caption": "测试用例", "psmodeltype": "PSSYSTESTCASE" }
+  },
+  "PSSYSTESTPRJ": {
+    "pssystestmodules": { "caption": "测试模块", "psmodeltype": "PSSYSTESTMODULE" }
+  },
+  "PSSYSWFSETTING": {
+    "pswfutiluiactions": { "caption": "功能界面行为", "psmodeltype": "PSWFUTILUIACTION" }
+  },
+  "PSVIEWMSGGROUP": {
+    "psviewmsggrpdetails": { "caption": "组成员", "psmodeltype": "PSVIEWMSGGRPDETAIL" }
+  },
+  "PSWORKFLOW": {
+    "pswfversions": { "caption": "版本", "psmodeltype": "PSWFVERSION" },
+    "pswfdes": { "caption": "相关实体", "psmodeltype": "PSWFDE" },
+    "psappwfs": { "caption": "工作流应用", "psmodeltype": "PSAPPWF" }
+  }
+}

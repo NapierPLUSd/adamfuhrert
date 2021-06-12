@@ -1,0 +1,18 @@
+{
+  "global.ibiz-modeling-studio.title": "IBiz Modeling Studio",
+  "command.ibiz-modeling-studio.category": "iBizModeling",
+  "command.ibiz-modeling-studio.user.login": "Login",
+  "command.ibiz-modeling-studio.open-ibiz-modeling": "Open iBizModeling Tool",
+  "command.ibiz-modeling-studio.system-info-terminal.show": "Open Information Terminal",
+  "command.ibiz-modeling-studio.system.publish.code": "Publish Code",
+  "command.ibiz-modeling-studio.template.publish": "Publish Template",
+  "command.ibiz-modeling-studio.mos-fs.copy-path": "Copy Path",
+  "command.ibiz-modeling-studio.mos-fs.open-file": "Open Model",
+  "command.ibiz-modeling-studio.mos-fs.open-runtime": "Open Model Runtime",
+  "command.ibiz-modeling-studio.mos-fs.search-model-by-path": "Search Model By Path",
+  "command.ibiz-modeling-studio.mos-fs.search-entity": "Search Entity",
+  "command.ibiz-modeling-studio.mos-fs.search-entity-view": "Search Entity View",
+  "properties.ibiz-modeling-studio.ibiz-modeling-studio-domain": "Modeling Studio Domain",
+  "properties.ibiz-modeling-studio.console.auto-display": "After the message terminal is closed, the terminal is reopened when the message is received",
+  "properties.ibiz-modeling-studio.ibiz-modeling-link.enable": "Enable iBizModeling Link Recognition"
+}
