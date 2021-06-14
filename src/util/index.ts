@@ -4,3 +4,4 @@ export { notNilEmpty, isNilOrEmpty, getNonce, showErrInfo, createUUID, getQueryV
 export { FileUtil } from './file-util/file-util';
 export { MosFileUtil } from './mos-file-util/mos-file-util';
 export { Interceptor } from './interceptor/interceptor';
+export { getPackageJson } from './package-file-util/package-file-util';

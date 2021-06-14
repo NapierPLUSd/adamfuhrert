@@ -1,9 +1,8 @@
 import { APIMessageItem } from '@ibiz/vscode-editor-api';
-import { CancellationToken, CustomTextEditorProvider, Disposable, ExtensionContext, TextDocument, Uri, ViewColumn, Webview, WebviewPanel, window, workspace } from 'vscode';
-import { GlobalConst } from '../../constants';
+import { CancellationToken, CustomTextEditorProvider, Disposable, ExtensionContext, TextDocument, Uri, ViewColumn, Webview, WebviewPanel, window } from 'vscode';
 import { ctx } from '../../context';
 import { PSMosFile } from '../../entities';
-import { notNilEmpty } from '../../util';
+import { getPackageJson, notNilEmpty } from '../../util';
 
 /**
  * 自定义文本编辑器基类
@@ -64,6 +63,17 @@ export abstract class CustomEditorBase implements CustomTextEditorProvider {
   protected abstract getHtmlForWebview(_document: TextDocument, _webview: Webview): string;
 
   protected getIframeElement(href: string): string {
+    const json = getPackageJson();
+    const version = json.version;
+    if (href.indexOf('?') !== -1) {
+      if (href.endsWith('&')) {
+        href = `${href}v=${version}`;
+      } else {
+        href = `${href}&v=${version}`;
+      }
+    } else {
+      href = `${href}?v=${version}`;
+    }
     return `<iframe id='iframe' src='${href}' frameborder='0' style='width:100%;height:100%;'></iframe>`;
   }
 
