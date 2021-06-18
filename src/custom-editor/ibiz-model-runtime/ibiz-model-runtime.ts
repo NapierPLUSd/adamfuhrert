@@ -23,7 +23,7 @@ export class IBizModelRuntimeEditorProvider extends CustomEditorBase {
     const resetCssUri = this.getResourcesUri('css/custom-editor-reset.css');
     const cssUri = this.getResourcesUri('css/custom-iframe-editor.css');
     const jsUri = this.getResourcesUri('js/custom-iframe-editor.js');
-    const iframe = this.getIframeElement(`${address}/model-runtime/`);
+    const iframe = this.getIframeElement(`${address}/model-runtime/?${ctx.version}`);
     return `<!DOCTYPE html>
 			<html lang='en'>
 			  <head>

@@ -74,7 +74,7 @@ export class IBizModelUIEditorProvider extends CustomEditorBase {
         } else if (!url.endsWith('&')) {
           url += '&';
         }
-        url += `platform=vscode`;
+        url += `platform=vscode&version=${ctx.version}`;
         urls[0] = url;
         iframeUrl = urls.join('#');
       }

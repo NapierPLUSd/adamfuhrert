@@ -2,6 +2,7 @@ import { commands, ExtensionContext, workspace, WorkspaceConfiguration } from 'v
 import { ConfigConst, RTContextConst } from '../constants';
 import { IBizMosFSCustom } from '../file-system';
 import { GlobalContextData } from '../interface';
+import { getPackageJson } from '../util';
 import { Websocket } from '../ws';
 
 /**
@@ -61,6 +62,34 @@ export class GlobalContext {
   private _mosFS!: IBizMosFSCustom;
   get mosFS(): IBizMosFSCustom {
     return this._mosFS;
+  }
+
+  /**
+   * package.json 内容
+   *
+   * @author chitanda
+   * @date 2021-12-09 11:12:21
+   * @private
+   * @type {Record<string, any>}
+   */
+  private _package?: Record<string, any>;
+  get package(): Record<string, any> {
+    if (!this._package) {
+      this._package = getPackageJson();
+    }
+    return this._package;
+  }
+
+  /**
+   * 当前插件版本
+   *
+   * @author chitanda
+   * @date 2021-12-09 11:12:42
+   * @readonly
+   * @type {string}
+   */
+  get version(): string {
+    return this.package.version;
   }
 
   /**
