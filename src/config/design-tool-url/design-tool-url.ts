@@ -21,11 +21,11 @@ export class DesignToolUrl {
     // 首页
     APPINDEXVIEW: '/index-design/#/indexdesign/___instance___/psappindexviews/___srfkey___/views/design',
     // 首页
-    PSAPPINDEXVIEW: `/toolbar-design/indexdesign.html#/indexdesign/___instance___/psappindexviews/___srfkey___/views/design`,
+    PSAPPINDEXVIEW: `/index-design/#/indexdesign/___instance___/psappindexviews/___srfkey___/views/design`,
     // 系统数据看板
-    PSSYSDASHBOARD: `/form-design/sysportaldesign.html#/sysportaldesign/___instance___/pssysdashboards/___srfkey___/views/design`,
+    PSSYSDASHBOARD: `/sysportal-design/#/sysportaldesign/___instance___/pssysdashboards/___srfkey___/views/design`,
     // 系统面板
-    PSSYSVIEWPANEL: `/form-design/paneldesign.html#/paneldesign/___instance___/pssysviewpanels/___srfkey___/views/design`,
+    PSSYSVIEWPANEL: `/panel-design/#/paneldesign/___instance___/pssysviewpanels/___srfkey___/views/design`,
     // 应用看板视图
     PSAPPPORTALVIEW: `/form-design/portaldesign.html#/portaldesign/___instance___/psappportalviews/___srfkey___/views/design`,
     // 工作流
@@ -35,11 +35,11 @@ export class DesignToolUrl {
     // 列表
     PSDELIST: `/md-design/#/home/___instance___/psdelists/___srfkey___/views/design`,
     // 数据视图
-    PSDEDATAVIEW: `/md-design/carddesign.html#/carddesign/___instance___/psdedataviews/___srfkey___/views/design`,
+    PSDEDATAVIEW: `/card-design/#/carddesign/___instance___/psdedataviews/___srfkey___/views/design`,
     // 工具栏
     PSDETOOLBAR: `/toolbar-design/#/toolbardesign/___instance___/psdetoolbars/___srfkey___/views/design`,
     // 图表设计
-    PSDECHART: `/chart-design/dynainst.html#/dynainst/F37F67FD-E3C1-496E-AB99-BC42017AE84C/psdecharts/___srfkey___/views/design`,
+    PSDECHART: `/chart-design/#/dynainst/F37F67FD-E3C1-496E-AB99-BC42017AE84C/psdecharts/___srfkey___/views/design`,
     // 实体处理逻辑
     DELOGIC: `/logic-design/#/home/___instance___/psdelogics/___srfkey___/views/design`,
     // 界面逻辑
