@@ -39,7 +39,7 @@ export class DesignToolUrl {
     // 工具栏
     PSDETOOLBAR: `/toolbar-design/#/toolbardesign/___instance___/psdetoolbars/___srfkey___/views/design`,
     // 图表设计
-    PSDECHART: `/chart-design/#/dynainst/F37F67FD-E3C1-496E-AB99-BC42017AE84C/psdecharts/___srfkey___/views/design`,
+    PSDECHART: `/chart-design/#/dynainst/___instance___/psdecharts/___srfkey___/views/design`,
     // 实体处理逻辑
     DELOGIC: `/logic-design/#/home/___instance___/psdelogics/___srfkey___/views/design`,
     // 界面逻辑
