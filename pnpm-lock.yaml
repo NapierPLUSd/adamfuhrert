@@ -8,8 +8,8 @@ specifiers:
   '@types/js-yaml': ^4.0.5
   '@types/mocha': ^9.0.0
   '@types/node': 16.x
-  '@types/ramda': ^0.27.59
-  '@types/vscode': ^1.62.0
+  '@types/ramda': ^0.27.60
+  '@types/vscode': ^1.63.0
   '@typescript-eslint/eslint-plugin': ^5.6.0
   '@typescript-eslint/parser': ^5.6.0
   '@vscode/test-electron': ^1.6.2
@@ -55,8 +55,8 @@ devDependencies:
   '@types/js-yaml': 4.0.5
   '@types/mocha': 9.0.0
   '@types/node': 16.11.6
-  '@types/ramda': 0.27.59
-  '@types/vscode': 1.62.0
+  '@types/ramda': 0.27.60
+  '@types/vscode': 1.63.0
   '@typescript-eslint/eslint-plugin': 5.6.0_16d83f5c41c3abb1061a82b07c18e4f3
   '@typescript-eslint/parser': 5.6.0_eslint@8.4.1+typescript@4.5.2
   '@vscode/test-electron': 1.6.2
@@ -220,14 +220,14 @@ packages:
     resolution: {integrity: sha512-ua7PgUoeQFjmWPcoo9khiPum3Pd60k4/2ZGXt18sm2Slk0W0xZTqt5Y0Ny1NyBiN1EVQ/+FaF9NcY4Qe6rwk5w==}
     dev: true
 
-  /@types/ramda/0.27.59:
-    resolution: {integrity: sha512-X7BMumtWUBUlQUk408KZxiqUFZ7ZKwBJXHT0QJz/HdB3F5fwDnLziXax0QfFXTRDV3FbrAgpOLCbjD010+55uQ==}
+  /@types/ramda/0.27.60:
+    resolution: {integrity: sha512-6ie74xhtl2ducVG8cC8mnYwpvIUWHBoLHbmvEsl5qPqJkqVP9ce5yZW10WgheKd2ua1yPIwd0miMWBsG19UmiQ==}
     dependencies:
       ts-toolbelt: 6.15.5
     dev: true
 
-  /@types/vscode/1.62.0:
-    resolution: {integrity: sha512-iGlQJ1w5e3qPUryroO6v4lxg3ql1ztdTCwQW3xEwFawdyPLoeUSv48SYfMwc7kQA7h6ThUqflZIjgKAykeF9oA==}
+  /@types/vscode/1.63.0:
+    resolution: {integrity: sha512-iePu1axOi5WSThV6l2TYcciBIpAlMarjBC8H0y8L8ocsZLxh7MttzwFU3pjoItF5fRVGxHS0Hsvje9jO3yJsfw==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.6.0_16d83f5c41c3abb1061a82b07c18e4f3:
