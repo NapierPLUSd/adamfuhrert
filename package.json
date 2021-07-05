@@ -96,8 +96,8 @@
         }
       },
       {
-        "command": "ibiz-modeling-studio.mos-fs.search-model-by-path",
-        "title": "%command.ibiz-modeling-studio.mos-fs.search-model-by-path%",
+        "command": "ibiz-modeling-studio.mos-fs.open-model-by-path",
+        "title": "%command.ibiz-modeling-studio.mos-fs.open-model-by-path%",
         "category": "%command.ibiz-modeling-studio.category%",
         "icon": {
           "light": "resources/icon/light/link.svg",
@@ -136,7 +136,7 @@
           "group": "navigation@10"
         },
         {
-          "command": "ibiz-modeling-studio.mos-fs.search-model-by-path",
+          "command": "ibiz-modeling-studio.mos-fs.open-model-by-path",
           "when": "view == iBizExplorer.ModelExpTree",
           "group": "navigation@20"
         },

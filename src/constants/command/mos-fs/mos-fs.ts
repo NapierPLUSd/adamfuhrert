@@ -36,7 +36,7 @@ export class MosFSConst {
    * @author chitanda
    * @date 2021-12-05 18:12:31
    */
-  readonly SEARCH_MODEL_BY_PATH = 'ibiz-modeling-studio.mos-fs.search-model-by-path';
+  readonly OPEN_MODEL_BY_PATH = 'ibiz-modeling-studio.mos-fs.open-model-by-path';
   /**
    * 搜索实体
    *

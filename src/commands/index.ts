@@ -5,7 +5,7 @@ import { OpenFileCommand } from './mos-fs/open-file';
 import { OpenRuntimeCommand } from './mos-fs/open-runtime';
 import { SearchEntityCommand } from './mos-fs/search-entity';
 import { SearchEntityViewCommand } from './mos-fs/search-entity-view';
-import { SearchModelCommand } from './mos-fs/search-model';
+import { OpenModelByPathCommand } from './mos-fs/search-model';
 import { SystemInfoTerminalShowCommand } from './system-info-terminal/show';
 import { SystemPublishCommand } from './system/publish';
 import { TemplatePublishCommand } from './template/publish';
@@ -27,7 +27,7 @@ export function installCommands(_context: ExtensionContext): void {
     new CopyPathCommand();
     new OpenFileCommand();
     new OpenRuntimeCommand();
-    new SearchModelCommand();
+    new OpenModelByPathCommand();
     new SearchEntityCommand();
     new SearchEntityViewCommand();
   }
