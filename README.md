@@ -1,112 +1,179 @@
-# iBiz建模工场（iBizModelingStudio）
+# iBiz 建模工场（iBizModelingStudio）
 
-辅助 iBizSys 系统进行模型开发，不需要脱离你的生产力工具即可完成需要的模型操作。
+## 介绍
 
-yaml 格式的文本编辑，友好的提示和便捷的修改，更拥有友好的图形化界面方便进行复杂模型编辑。良好的索引界面，帮助你更快的定位到需要修改的模型。无本地文件，无需占用本地空间。
+iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便捷的开发过程。
+复杂模型下友好的图形化设计界面、模型树快速打开需要修改的模型、修改完毕顺手的代码发布、模板发布、系统信息终端详尽的知道系统的每一个变化。
 
-## 功能预览
+## 功能概览
 
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/tool-preview.gif' style='width: 100%'></img>
+#### 1. 模型导航区基本功能
 
-## vscode 基本设置
+打开 iBizModeling 工具
 
-##### 1. 配置基本服务域地址
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/OpenIBizModelingTool.gif' style='width: 100%'></img>
+
+根据模型路径，快速打开配置界面
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/QuickOpenModelByPath.gif' style='width: 100%'></img>
+
+根据名称快速查找实体
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/QuickSearchEntity.gif' style='width: 100%'></img>
+
+系统日志信息终端
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/SystemInfoTerminal.gif' style='width: 100%'></img>
+
+#### 2. 模型运行时查看
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/SystemModelRuntime.gif' style='width: 100%'></img>
+
+#### 3. 内置设计界面
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/ModelDesignTool.gif' style='width: 100%'></img>
+
+#### 4. 代码发布
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishCode.gif' style='width: 100%'></img>
+
+#### 5. 发布模板
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishTemplate.gif' style='width: 100%'></img>
+
+#### 6. 打开项目中的模型链接
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/OpenModelPathInProject.gif' style='width: 100%'></img>
+
+## 插件使用
+
+#### 前置要求
+
+1. 拥有 iBizModeling 账户。[注册账户](https://www.ibizlab.cn/register.html)
+
+2. 本地有 iBizSys 项目，并且账户对项目拥有修改权限
+
+3. 需要打开的项目根目录有`.ibizproject`文件
+
+#### 快速开始
+
+1. 请确认项目`.ibizproject`文件中有如下几个属性，此文件一般为模板发布
+
+   ```yaml
+   # .ibizproject 文件
+
+   # 打开类型设置。当前支持系统，后续将支持直接从应用开始。
+   type: PSSYSTEM
+   # 方案标识
+   psdevsln: 22A4AD93-6A7C-4380-B912-6B2CA9C3DCDF
+   # 系统标识
+   psdevslnsys: 913D11CB-B368-4589-845C-9B47308A02B4
+   # 系统名称
+   psdevslnsysname: iBiz产品生产管理系统
+   ```
+
+2. 新建 vscode 窗口，快捷键：`Ctrl+Shift+N`
+
+3. 打开项目并登陆此项目的 iBizModeling 账户
+
+   `插件在未登录时会默认提示登录，也可以通过 命令(Ctrl+P) => Login 登录`
+
+   <img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/OpenProjectAndLogin.gif' style='width: 100%'></img>
+
+4. 登陆成功后会提示`重新加载项目`，请重新加载
+
+5. 可以开始使用啦~
+
+## 支持功能
+
+1. 登录
+
+2. 系统信息终端
+
+3. 识别`iBizModeling:/`域的模型路径跳转
+
+4. 模型导航树
+
+   - 打开 iBizModeling 工具
+   - 根据路径打开模型
+   - 查找实体
+   - 显示信息终端
+   - 代码发布
+   - 模板发布
+   - 右键菜单：复制模型路径
+
+5. 内置设计界面
+
+   - 用例图
+   - ER 图
+   - 应用菜单
+   - 实体视图
+   - 模型运行时
+   - 表单
+   - 表格
+   - 树
+   - 图表
+   - 列表
+   - 卡片
+   - 工具栏
+   - 面板
+   - 数据看板
+
+6. 命令(Command)&nbsp;&ensp;快捷键：`Ctrl+Shift+P`
+
+   | 命令                      | 描述                     |
+   | :------------------------ | :----------------------- |
+   | Login                     | 登陆 iBizModeling 账户   |
+   | Logout                    | 登出 iBizModeling 账户   |
+   | Open iBizModeling Tool    | 打开 iBizModeling 工具   |
+   | Open Information Terminal | 显示系统信息终端         |
+   | Open Model By Path        | 根据路径打开模型配置界面 |
+   | Search Entity             | 搜索实体                 |
+   | Publish Code              | 发布代码                 |
+   | Publish Template          | 发布模板                 |
+
+## vscode 设置
 
 ```json
 // 配置说明
 {
-  "ibiz-modeling-studio.iBizModelingStudioDomain": "基本服务提供域地址"
+  "ibiz-modeling-studio.iBizModelingStudioDomain": "基本服务提供域地址",
+  "ibiz-modeling-studio.console.auto-display": "是否在有消息时自动显示信息终端",
+  "ibiz-modeling-studio.ibiz-modeling-link.enable": "是否启用识别文件中 iBizModeling:/ 模型路径跳转",
 }
-// 正式环境配置 <插件默认配置>
+// 默认配置
 {
-  "ibiz-modeling-studio.iBizModelingStudioDomain": "http://studio.ibizmodeling.cn"
+  "ibiz-modeling-studio.iBizModelingStudioDomain": "http://studio.ibizmodeling.cn",
+  "ibiz-modeling-studio.console.auto-display": true,
+  "ibiz-modeling-studio.ibiz-modeling-link.enable": true,
 }
 // 开发环境配置
 {
-  "ibiz-modeling-studio.iBizModelingStudioDomain": "http://172.16.170.145"
+  "ibiz-modeling-studio.iBizModelingStudioDomain": "http://172.16.170.145",
 }
 ```
 
-##### 2. 系统消息终端
+## 帮助
 
-1. 在关闭后收到消息时会自动弹出，可以配置 `ibiz-modeling-studio.console.autoDisplay=false` 关闭弹出
+#### 如何在模板中使用 iBizModeling 模型路径
 
-## 前置要求
+1. 找到需要发布对象的运行时，搜索 getMOSFilePath 即可找到模型路径
 
-1. 拥有 iBizLab 账户
+   <img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/ModelRuntimeSearchModelingPath.png' style='width: 100%'></img>
 
-2. 本地有 iBizSys 项目，并且账户对项目拥有修改权限
+2. 模板输出路径时，加上域`iBizModeling:/`
 
-3. 项目根目录有 .ibizproject 文件
-
-## 快速开始
-
-1. 请确认项目 .ibizproject 文件中有如下几个属性
-
-```yaml
-# .ibizproject 文件
-
-# 打开类型设置。当前支持系统，后续将支持直接从应用开始。
-type: PSSYSTEM
-# 方案标识
-psdevsln: 22A4AD93-6A7C-4380-B912-6B2CA9C3DCDF
-# 系统标识
-psdevslnsys: 913D11CB-B368-4589-845C-9B47308A02B4
-# 系统名称
-psdevslnsysname: iBiz产品生产管理系统
-```
-
-2. 在 vscode 新建窗口，快捷键：`Ctrl+Shift+N`
-
-3. 将项目添加到工作区，按钮路径：`文件 => 将文件夹添加到工作区`
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/add-folder-to-workspace.gif' style='width: 100%'></img>
-
-4. 添加成功识并别到 .ibizproject 文件后会弹出登录框，请使用 iBizLab 账号登录
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/login-user.gif' style='width: 100%'></img>
-
-5. 登录成功后重新加载工作区，使插件初始化文件系统
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/reload-workspace.gif' style='width: 100%'></img>
-
-6. 初始化完毕，将工作区保存
-
-7. 以后直接打开工作区即可使用啦~
-
-## 命令(Command)&nbsp;&ensp;快捷键：`Ctrl+Shift+P`
-
-1. 打开系统消息终端
-
-2. 发布系统
-
-3. 发布模板
+   例：iBizModeling:/psmodules/AppDesign/psdataentities/PSAPPVIEW
 
 ## Issues
 
-在使用过程中遇见问题，可以来 [issues](http://172.16.180.230/vscode-plugin/ibiz-modeling-studio/issues) 提交
+在使用过程中遇见问题，可以来 [issues](https://gitee.com/iBizModeling/ibiz-modeling-studio/issues) 交流
 
-### 0.0.1
-
-初始版本
+### [版本日志](./CHANGELOG.md)
 
 ---
 
-<!-- ## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets -->
-
-### 了解更多
+## 了解更多
 
 - [iBizSys 官网](http://www.ibizsys.cn)
 
@@ -116,4 +183,4 @@ Ensure that you've read through the extensions guidelines and follow the best pr
 
 ## 常见问题
 
-1. 出现 <font color=#eb445a>read ECONNRESET</font> 错误提示，请检查是否使用了翻墙软件。一般为翻墙软件导致的无法发送请求。
+1. 出现 <font color=#eb445a>read ECONNRESET</font> 错误提示，请检查是否使用了翻墙软件。一般为 DNS 解析异常导致的。
