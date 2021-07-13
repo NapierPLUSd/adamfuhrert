@@ -169,7 +169,7 @@ iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便�
 
 在使用过程中遇见问题，可以来 [issues](https://gitee.com/iBizModeling/ibiz-modeling-studio/issues) 交流
 
-### [版本日志](./CHANGELOG.md)
+### [版本日志](https://gitee.com/iBizModeling/ibiz-modeling-studio/blob/master/CHANGELOG.md)
 
 ---
 
