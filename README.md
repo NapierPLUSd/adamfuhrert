@@ -5,46 +5,6 @@
 iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便捷的开发过程。
 复杂模型下友好的图形化设计界面、模型树快速打开需要修改的模型、系统信息终端详尽的知道系统的每一个变化、等等。快开始体验吧！
 
-## 功能概览
-
-#### 1. 模型导航区基本功能
-
-打开 iBizModeling 工具
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/OpenIBizModelingTool.gif' style='width: 100%'></img>
-
-根据模型路径，快速打开配置界面
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/QuickOpenModelByPath.gif' style='width: 100%'></img>
-
-根据名称快速查找实体
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/QuickSearchEntity.gif' style='width: 100%'></img>
-
-系统日志信息终端
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/SystemInfoTerminal.gif' style='width: 100%'></img>
-
-#### 2. 模型运行时查看
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/SystemModelRuntime.gif' style='width: 100%'></img>
-
-#### 3. 内置设计界面
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/ModelDesignTool.gif' style='width: 100%'></img>
-
-#### 4. 代码发布
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishCode.gif' style='width: 100%'></img>
-
-#### 5. 发布模板
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishTemplate.gif' style='width: 100%'></img>
-
-#### 6. 打开项目中的模型链接
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/OpenModelPathInProject.gif' style='width: 100%'></img>
-
 ## 插件使用
 
 #### 前置要求
@@ -152,6 +112,46 @@ iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便�
   "ibiz-modeling-studio.iBizModelingStudioDomain": "http://172.16.170.145",
 }
 ```
+
+## 功能概览
+
+#### 1. 模型导航区基本功能
+
+打开 iBizModeling 工具
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/OpenIBizModelingTool.gif' style='width: 100%'></img>
+
+根据模型路径，快速打开配置界面
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/QuickOpenModelByPath.gif' style='width: 100%'></img>
+
+根据名称快速查找实体
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/QuickSearchEntity.gif' style='width: 100%'></img>
+
+系统日志信息终端
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/SystemInfoTerminal.gif' style='width: 100%'></img>
+
+#### 2. 模型运行时查看
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/SystemModelRuntime.gif' style='width: 100%'></img>
+
+#### 3. 内置设计界面
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/ModelDesignTool.gif' style='width: 100%'></img>
+
+#### 4. 代码发布
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishCode.gif' style='width: 100%'></img>
+
+#### 5. 发布模板
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishTemplate.gif' style='width: 100%'></img>
+
+#### 6. 打开项目中的模型链接
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/OpenModelPathInProject.gif' style='width: 100%'></img>
 
 ## 帮助
 
