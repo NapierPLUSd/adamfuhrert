@@ -96,6 +96,15 @@
         }
       },
       {
+        "command": "ibiz-modeling-studio.mos-fs.open-wiki",
+        "title": "%command.ibiz-modeling-studio.mos-fs.open-wiki%",
+        "category": "%command.ibiz-modeling-studio.category%",
+        "icon": {
+          "light": "resources/icon/light/model-wiki.svg",
+          "dark": "resources/icon/dark/model-wiki.svg"
+        }
+      },
+      {
         "command": "ibiz-modeling-studio.mos-fs.open-model-by-path",
         "title": "%command.ibiz-modeling-studio.mos-fs.open-model-by-path%",
         "category": "%command.ibiz-modeling-studio.category%",
@@ -163,14 +172,19 @@
       ],
       "view/item/context": [
         {
-          "command": "ibiz-modeling-studio.mos-fs.open-runtime",
+          "command": "ibiz-modeling-studio.mos-fs.open-wiki",
           "when": "view == iBizExplorer.ModelExpTree && viewItem == MODEL",
           "group": "inline@10"
         },
         {
-          "command": "ibiz-modeling-studio.mos-fs.open-file",
+          "command": "ibiz-modeling-studio.mos-fs.open-runtime",
           "when": "view == iBizExplorer.ModelExpTree && viewItem == MODEL",
           "group": "inline@20"
+        },
+        {
+          "command": "ibiz-modeling-studio.mos-fs.open-file",
+          "when": "view == iBizExplorer.ModelExpTree && viewItem == MODEL",
+          "group": "inline@30"
         },
         {
           "command": "ibiz-modeling-studio.mos-fs.copy-path",

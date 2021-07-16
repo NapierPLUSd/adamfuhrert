@@ -38,6 +38,11 @@ export async function loadConfig(): Promise<void> {
         ctx.set('psdevsln', config.psdevsln);
         ctx.set('psdevslnsys', config.psdevslnsys);
         ctx.set('psdevslnsysname', config.psdevslnsysname);
+        let gitRemote: string = config['git-remote'];
+        if (gitRemote && gitRemote.endsWith('.git')) {
+          gitRemote = gitRemote.replace('.git', '');
+        }
+        ctx.set('gitRemote', gitRemote);
         Object.assign(globalConfig, config);
       } else {
         window.showErrorMessage('埃必致 系统插件启动失败，未识别到项目根目录中的 .ibizproject 配置文件');

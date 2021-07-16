@@ -31,6 +31,13 @@ export class MosFSConst {
    */
   readonly OPEN_RUNTIME = 'ibiz-modeling-studio.mos-fs.open-runtime';
   /**
+   * 打开 wiki 界面
+   *
+   * @author chitanda
+   * @date 2021-12-12 13:12:06
+   */
+  readonly OPEN_WIKI = 'ibiz-modeling-studio.mos-fs.open-wiki';
+  /**
    * 搜索模型
    *
    * @author chitanda

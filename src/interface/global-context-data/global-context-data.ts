@@ -39,4 +39,12 @@ export interface GlobalContextData {
    * @type {string}
    */
   psdevslnsysname?: string;
+  /**
+   * 项目 git 地址
+   *
+   * @author chitanda
+   * @date 2021-12-12 14:12:49
+   * @type {string}
+   */
+  gitRemote?: string;
 }

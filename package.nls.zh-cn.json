@@ -10,6 +10,7 @@
   "command.ibiz-modeling-studio.mos-fs.copy-path": "复制路径",
   "command.ibiz-modeling-studio.mos-fs.open-file": "打开模型",
   "command.ibiz-modeling-studio.mos-fs.open-runtime": "打开运行时",
+  "command.ibiz-modeling-studio.mos-fs.open-wiki": "打开Wiki",
   "command.ibiz-modeling-studio.mos-fs.open-model-by-path": "根据路径查找模型",
   "command.ibiz-modeling-studio.mos-fs.search-entity": "查找实体",
   "command.ibiz-modeling-studio.mos-fs.search-entity-view": "查找实体视图",
