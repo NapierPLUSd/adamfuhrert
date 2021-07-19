@@ -6,11 +6,17 @@
 并且此项目遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/).
 
 ## [Unreleased]
+
 ### Added
+
+- 模型树导航：
+  - 项：打开对应路径的 wiki 界面
 - 命令(Command)
- - 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
+- 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
+- 打开 wiki（Open Wiki）：command.ibiz-modeling-studio.mos-fs.open-wiki
 
 ## [0.0.1] - 2021-12-10
+
 ### Added
 
 - 登录
@@ -26,7 +32,7 @@
   - 右键菜单：复制模型路径
 - 内置图形编辑
   - 用例图
-  - ER图
+  - ER 图
   - 应用菜单
   - 实体视图
   - 模型运行时
