@@ -12,8 +12,10 @@
 - 模型树导航：
   - 项：打开对应路径的 wiki 界面
 - 命令(Command)
-- 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
-- 打开 wiki（Open Wiki）：command.ibiz-modeling-studio.mos-fs.open-wiki
+  - 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
+  - 打开 wiki（Open Wiki）：command.ibiz-modeling-studio.mos-fs.open-wiki
+- .ibizproject 文件
+  - 新增：git-remote 参数
 
 ## [0.0.1] - 2021-12-10
 
