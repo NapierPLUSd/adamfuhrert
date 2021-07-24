@@ -1,0 +1,18 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+/**
+ * gitlab 相关指令集
+ *
+ * @author chitanda
+ * @date 2021-12-13 11:12:37
+ * @export
+ * @class GitLabConst
+ */
+export class GitLabConst {
+  /**
+   * 打开当前项目的 gitlab
+   *
+   * @author chitanda
+   * @date 2021-12-13 11:12:47
+   */
+  readonly OPEN_PROJECT = 'ibiz-modeling-studio.gitlab.open-project';
+}

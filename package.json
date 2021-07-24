@@ -132,6 +132,12 @@
         }
       },
       {
+        "command": "ibiz-modeling-studio.gitlab.open-project",
+        "title": "%command.ibiz-modeling-studio.gitlab.open-project%",
+        "category": "%command.ibiz-modeling-studio.category%",
+        "icon": "resources/icon/gitlab.svg"
+      },
+      {
         "command": "ibiz-modeling-studio.user.login-reply-path-handle",
         "title": "处理粘贴板中的登录地址",
         "enablement": "false"
@@ -145,14 +151,19 @@
           "group": "navigation@10"
         },
         {
-          "command": "ibiz-modeling-studio.mos-fs.open-model-by-path",
+          "command": "ibiz-modeling-studio.gitlab.open-project",
           "when": "view == iBizExplorer.ModelExpTree",
           "group": "navigation@20"
         },
         {
-          "command": "ibiz-modeling-studio.mos-fs.search-entity",
+          "command": "ibiz-modeling-studio.mos-fs.open-model-by-path",
           "when": "view == iBizExplorer.ModelExpTree",
           "group": "navigation@30"
+        },
+        {
+          "command": "ibiz-modeling-studio.mos-fs.search-entity",
+          "when": "view == iBizExplorer.ModelExpTree",
+          "group": "navigation@40"
         },
         {
           "command": "ibiz-modeling-studio.system-info-terminal.show",

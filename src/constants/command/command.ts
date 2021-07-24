@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
+import { GitLabConst } from './gitlab/gitlab';
 import { IBizModeling } from './ibiz-modeling/ibiz-modeling';
 import { MosFSConst } from './mos-fs/mos-fs';
 import { SystemInfoTerminalConst } from './system-info-terminal/system-info-terminal';
@@ -33,4 +34,6 @@ export class CommandConst {
   static readonly USER: UserConst = new UserConst();
 
   static readonly MOS_FS: MosFSConst = new MosFSConst();
+
+  static readonly GITLAB: GitLabConst = new GitLabConst();
 }

@@ -1,4 +1,5 @@
 import { ExtensionContext } from 'vscode';
+import { OpenProjectCommand } from './gitlab/open-project';
 import { OpenIBizModelingCommand } from './ibiz-modeling/open-ibiz-modeling';
 import { CopyPathCommand } from './mos-fs/copy-path';
 import { OpenFileCommand } from './mos-fs/open-file';
@@ -22,6 +23,7 @@ import { UserLogoutCommand } from './user/logout';
  * @param {ExtensionContext} _context
  */
 export function installCommands(_context: ExtensionContext): void {
+  new OpenProjectCommand();
   new OpenIBizModelingCommand();
   // mos-fs 相关
   {
@@ -33,9 +35,18 @@ export function installCommands(_context: ExtensionContext): void {
     new SearchEntityCommand();
     new SearchEntityViewCommand();
   }
-  new SystemPublishCommand();
-  new SystemInfoTerminalShowCommand();
-  new TemplatePublishCommand();
-  new UserLoginCommand();
-  new UserLogoutCommand();
+  // 系统相关
+  {
+    new SystemPublishCommand();
+    new SystemInfoTerminalShowCommand();
+  }
+  // 模板相关
+  {
+    new TemplatePublishCommand();
+  }
+  // 用户相关
+  {
+    new UserLoginCommand();
+    new UserLogoutCommand();
+  }
 }
