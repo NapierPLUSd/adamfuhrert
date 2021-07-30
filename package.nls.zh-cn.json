@@ -10,11 +10,11 @@
   "command.ibiz-modeling-studio.mos-fs.copy-path": "复制路径",
   "command.ibiz-modeling-studio.mos-fs.open-file": "打开模型",
   "command.ibiz-modeling-studio.mos-fs.open-runtime": "打开运行时",
-  "command.ibiz-modeling-studio.mos-fs.open-wiki": "打开Wiki",
   "command.ibiz-modeling-studio.mos-fs.open-model-by-path": "根据路径查找模型",
   "command.ibiz-modeling-studio.mos-fs.search-entity": "查找实体",
   "command.ibiz-modeling-studio.mos-fs.search-entity-view": "查找实体视图",
   "command.ibiz-modeling-studio.gitlab.open-project": "打开项目 GitLab",
+  "command.ibiz-modeling-studio.gitlab.open-wiki": "打开Wiki",
   "properties.ibiz-modeling-studio.ibiz-modeling-studio-domain": "建模工场域",
   "properties.ibiz-modeling-studio.console.auto-display": "消息终端关闭后，收到时消息重新打开终端",
   "properties.ibiz-modeling-studio.ibiz-modeling-link.enable": "启用 iBizModeling 链接识别"

@@ -4,7 +4,7 @@ import { OpenIBizModelingCommand } from './ibiz-modeling/open-ibiz-modeling';
 import { CopyPathCommand } from './mos-fs/copy-path';
 import { OpenFileCommand } from './mos-fs/open-file';
 import { OpenRuntimeCommand } from './mos-fs/open-runtime';
-import { OpenWikiCommand } from './mos-fs/open-wiki';
+import { OpenWikiCommand } from './gitlab/open-wiki';
 import { SearchEntityCommand } from './mos-fs/search-entity';
 import { SearchEntityViewCommand } from './mos-fs/search-entity-view';
 import { OpenModelByPathCommand } from './mos-fs/search-model';

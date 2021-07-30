@@ -13,8 +13,8 @@
   - 项：打开对应路径的 wiki 界面
 - 命令(Command)
   - 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
-  - 打开 wiki（Open Wiki）：command.ibiz-modeling-studio.mos-fs.open-wiki
-  - 打开项目（Open Project GitLab）：ibiz-modeling-studio.gitlab.open-project
+  - 打开 wiki（Open Wiki）：command.ibiz-modeling-studio.gitlab.open-wiki
+  - 打开项目 GitLab（Open Project GitLab）：ibiz-modeling-studio.gitlab.open-project
 - .ibizproject 文件
   - 新增：git-remote 参数
 

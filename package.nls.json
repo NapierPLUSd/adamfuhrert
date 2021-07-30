@@ -10,11 +10,11 @@
   "command.ibiz-modeling-studio.mos-fs.copy-path": "Copy Path",
   "command.ibiz-modeling-studio.mos-fs.open-file": "Open Model",
   "command.ibiz-modeling-studio.mos-fs.open-runtime": "Open Model Runtime",
-  "command.ibiz-modeling-studio.mos-fs.open-wiki": "Open Wiki",
   "command.ibiz-modeling-studio.mos-fs.open-model-by-path": "Open Model By Path",
   "command.ibiz-modeling-studio.mos-fs.search-entity": "Search Entity",
   "command.ibiz-modeling-studio.mos-fs.search-entity-view": "Search Entity View",
   "command.ibiz-modeling-studio.gitlab.open-project": "Open Project GitLab",
+  "command.ibiz-modeling-studio.gitlab.open-wiki": "Open Wiki",
   "properties.ibiz-modeling-studio.ibiz-modeling-studio-domain": "Modeling Studio Domain",
   "properties.ibiz-modeling-studio.console.auto-display": "After the message terminal is closed, the terminal is reopened when the message is received",
   "properties.ibiz-modeling-studio.ibiz-modeling-link.enable": "Enable iBizModeling Link Recognition"

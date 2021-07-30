@@ -15,4 +15,11 @@ export class GitLabConst {
    * @date 2021-12-13 11:12:47
    */
   readonly OPEN_PROJECT = 'ibiz-modeling-studio.gitlab.open-project';
+  /**
+   * 打开 wiki 界面
+   *
+   * @author chitanda
+   * @date 2021-12-12 13:12:06
+   */
+  readonly OPEN_WIKI = 'ibiz-modeling-studio.gitlab.open-wiki';
 }
