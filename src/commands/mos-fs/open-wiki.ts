@@ -1,4 +1,4 @@
-import { commands, Uri } from 'vscode';
+import { commands, Uri, window } from 'vscode';
 import { CommandConst } from '../../constants';
 import { ctx } from '../../context';
 import { PSMosFile } from '../../entities';
@@ -34,6 +34,10 @@ export class OpenWikiCommand {
     }
     const gitRemote = ctx.get('gitRemote');
     const wikiUrl = `${gitRemote}/wikis${path}`;
+    if (!wikiUrl) {
+      window.showErrorMessage('GitLab 地址不存在，请先在 .ibizproject 中配置');
+      return;
+    }
     const uri = Uri.parse(wikiUrl);
     commands.executeCommand(CommandConst.VSCODE.OPEN, uri);
   }

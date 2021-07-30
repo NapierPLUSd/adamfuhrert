@@ -48,6 +48,14 @@ export async function asyncActivate(context: ExtensionContext): Promise<void> {
     }
   }
   {
+    // 未登录提示登录，已登录时自动更新工作区
+    const token = ctx.token;
+    if (isNilOrEmpty(token)) {
+      login.notLogged();
+      return;
+    }
+  }
+  {
     // 在读取配置文件后，获取应用基本信息
     const appData = (await serviceApi.getAppData()) as Record<string, string>;
     if (notNilEmpty(appData)) {
@@ -55,13 +63,6 @@ export async function asyncActivate(context: ExtensionContext): Promise<void> {
       ctx.setWS(new Websocket({ psdsconsoleurl: appData.psdsconsoleurl, psdevslnsysid: appData.psdevslnsysid }));
       // 初始化系统 output terminal
       wsOutput.init(ctx.ws, ctx.get('psdevslnsysname') || '未知');
-    }
-  }
-  {
-    // 未登录提示登录，已登录时自动更新工作区
-    const token = ctx.token;
-    if (isNilOrEmpty(token)) {
-      login.notLogged();
     }
   }
   ctx.completedEnd();
