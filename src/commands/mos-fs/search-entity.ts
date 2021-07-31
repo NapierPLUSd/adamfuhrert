@@ -32,6 +32,8 @@ export class SearchEntityCommand {
     const entity = await window.showQuickPick(promise, {
       title: '查找实体',
       placeHolder: '请输入实体名称',
+      matchOnDescription: true,
+      matchOnDetail: true,
     });
     if (entity) {
       commands.executeCommand(CommandConst.MOS_FS.OPEN_FILE, entity.data);

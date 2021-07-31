@@ -39,7 +39,7 @@ export class MosFilePickItem implements QuickPickItem {
       this.label = mosFile.filetag4;
     }
     if (notNilEmpty(this.label)) {
-      this.label = `${this.label} (${mosFile.psmosfilename})`;
+      this.description = mosFile.psmosfilename;
     } else {
       this.label = mosFile.psmosfilename;
     }
