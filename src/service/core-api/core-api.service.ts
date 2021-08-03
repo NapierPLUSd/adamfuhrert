@@ -68,6 +68,36 @@ export class CoreAPI {
   }
 
   /**
+   * 查询当前系统运行
+   *
+   * @author chitanda
+   * @date 2021-12-13 10:12:40
+   * @static
+   * @return {*}  {Promise<any[]>}
+   */
+  static async curSystemRuns(): Promise<any[]> {
+    if (ctx.completed === false) {
+      await ctx.waitCompleted();
+    }
+    try {
+      const config: AxiosRequestConfig<unknown> = {
+        headers: {
+          'psdevslnsys': ctx.get('psdevslnsys') as string,
+          'content-type': 'application/json;charset=UTF-8',
+        },
+      };
+      const path = `${this.getAddress()}/pssystemruns/fetchcursys`;
+      const res = await Fetch.get(path, { n_psdevslnid_eq: ctx.get('psdevsln'), size: 1000, page: 0 }, config);
+      if (res) {
+        return res.data;
+      }
+    } catch (err) {
+      showErrInfo(err);
+    }
+    return [];
+  }
+
+  /**
    * 获取 core api 服务域
    *
    * @author chitanda
