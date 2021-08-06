@@ -18,6 +18,10 @@
 - .ibizproject 文件
   - 新增：git-remote 参数
 
+### Changed
+
+- 代码发布：由原来的默认配置发布，改为使用选择配置好的系统运行信息。[df5342e1fe1d53c7593ce08a733e950c41d65b39](https://gitee.com/iBizModeling/ibiz-modeling-studio/commit/df5342e1fe1d53c7593ce08a733e950c41d65b39)
+
 ## [0.0.1] - 2021-12-10
 
 ### Added
