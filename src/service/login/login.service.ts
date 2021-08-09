@@ -111,14 +111,16 @@ export class LoginService {
    * @return {*}  {Promise<void>}
    */
   protected async loginReplyPathHandle(): Promise<void> {
-    const pasteText = await env.clipboard.readText();
-    if (pasteText && pasteText.startsWith('vscode://')) {
-      this.uriHandle.handleUri(Uri.parse(pasteText));
-    } else {
-      const result = await window.showErrorMessage('无法识别的登录回调地址，请检查粘贴板内容', '取消登录');
+    const url = await window.showInputBox({ placeHolder: '请输入登录回调地址' });
+    if (url && url.startsWith('vscode://')) {
+      this.uriHandle.handleUri(Uri.parse(url));
+    } else if (notNilEmpty(url)) {
+      const result = await window.showErrorMessage('无法识别的登录回调地址，请检查粘贴的内容', '取消登录');
       if (result === '取消登录') {
         login.resolveLogin();
       }
+    } else {
+      login.resolveLogin();
     }
   }
 
