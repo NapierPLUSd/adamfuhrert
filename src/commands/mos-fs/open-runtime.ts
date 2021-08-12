@@ -19,7 +19,7 @@ export class OpenRuntimeCommand {
   }
 
   constructor() {
-    commands.registerCommand(CommandConst.MOS_FS.OPEN_RUNTIME, this.execute.bind(this));
+    commands.registerCommand(CommandConst.MOS_FS.OPEN_RUNTIME, this.execute, this);
   }
 
   protected async execute(param: Entry | PSMosFile | string): Promise<void> {

@@ -12,7 +12,7 @@ import { IBizMOSService } from '../../file-system';
  */
 export class SearchEntityViewCommand {
   constructor() {
-    commands.registerCommand(CommandConst.MOS_FS.SEARCH_ENTITY_VIEW, this.execute.bind(this));
+    commands.registerCommand(CommandConst.MOS_FS.SEARCH_ENTITY_VIEW, this.execute, this);
   }
 
   protected async execute(): Promise<void> {

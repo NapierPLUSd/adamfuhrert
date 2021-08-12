@@ -12,7 +12,7 @@ import { login } from '../../service';
  */
 export class UserLogoutCommand {
   constructor() {
-    commands.registerCommand(CommandConst.USER.LOGOUT, this.execute.bind(this));
+    commands.registerCommand(CommandConst.USER.LOGOUT, this.execute, this);
   }
 
   protected async execute(): Promise<void> {

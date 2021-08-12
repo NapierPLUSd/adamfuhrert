@@ -12,7 +12,7 @@ import { ctx } from '../../context';
  */
 export class OpenProjectCommand {
   constructor() {
-    commands.registerCommand(CommandConst.GITLAB.OPEN_PROJECT, this.execute.bind(this));
+    commands.registerCommand(CommandConst.GITLAB.OPEN_PROJECT, this.execute, this);
   }
 
   protected async execute(): Promise<void> {

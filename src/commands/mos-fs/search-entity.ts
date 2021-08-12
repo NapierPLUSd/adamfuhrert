@@ -13,7 +13,7 @@ import { IBizMOSService } from '../../file-system';
  */
 export class SearchEntityCommand {
   constructor() {
-    commands.registerCommand(CommandConst.MOS_FS.SEARCH_ENTITY, this.execute.bind(this));
+    commands.registerCommand(CommandConst.MOS_FS.SEARCH_ENTITY, this.execute, this);
   }
 
   protected async execute(): Promise<void> {

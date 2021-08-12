@@ -13,7 +13,7 @@ import { Directory, Entry, File } from '../../file-system';
  */
 export class CopyPathCommand {
   constructor() {
-    commands.registerCommand(CommandConst.MOS_FS.COPY_PATH, this.execute.bind(this));
+    commands.registerCommand(CommandConst.MOS_FS.COPY_PATH, this.execute, this);
   }
 
   protected async execute(param: Entry | PSMosFile | string): Promise<void> {

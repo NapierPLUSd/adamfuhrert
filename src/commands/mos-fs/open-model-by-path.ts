@@ -11,7 +11,7 @@ import { CommandConst, GlobalConst } from '../../constants';
  */
 export class OpenModelByPathCommand {
   constructor() {
-    commands.registerCommand(CommandConst.MOS_FS.OPEN_MODEL_BY_PATH, this.execute.bind(this));
+    commands.registerCommand(CommandConst.MOS_FS.OPEN_MODEL_BY_PATH, this.execute, this);
   }
 
   protected async execute(basePath?: string): Promise<void> {

@@ -7,7 +7,7 @@ import { OpenRuntimeCommand } from './mos-fs/open-runtime';
 import { OpenWikiCommand } from './gitlab/open-wiki';
 import { SearchEntityCommand } from './mos-fs/search-entity';
 import { SearchEntityViewCommand } from './mos-fs/search-entity-view';
-import { OpenModelByPathCommand } from './mos-fs/search-model';
+import { OpenModelByPathCommand } from './mos-fs/open-model-by-path';
 import { SystemInfoTerminalShowCommand } from './system-info-terminal/show';
 import { SystemPublishCommand } from './system/publish';
 import { TemplatePublishCommand } from './template/publish';

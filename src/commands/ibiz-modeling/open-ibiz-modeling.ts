@@ -12,7 +12,7 @@ import { ctx } from '../../context';
  */
 export class OpenIBizModelingCommand {
   constructor() {
-    commands.registerCommand(CommandConst.IBIZ_MODELING.OPEN, this.execute.bind(this));
+    commands.registerCommand(CommandConst.IBIZ_MODELING.OPEN, this.execute, this);
   }
 
   protected async execute(): Promise<void> {

@@ -15,7 +15,7 @@ import { isNilOrEmpty } from '../../util';
  */
 export class OpenWikiCommand {
   constructor() {
-    commands.registerCommand(CommandConst.GITLAB.OPEN_WIKI, this.execute.bind(this));
+    commands.registerCommand(CommandConst.GITLAB.OPEN_WIKI, this.execute, this);
   }
 
   protected async execute(param: Entry | PSMosFile | string): Promise<void> {

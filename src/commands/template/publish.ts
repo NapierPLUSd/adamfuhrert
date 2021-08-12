@@ -13,7 +13,7 @@ import { CoreAPI } from '../../service';
  */
 export class TemplatePublishCommand {
   constructor() {
-    commands.registerCommand(CommandConst.TEMPLATE.PUBLISH, this.execute.bind(this));
+    commands.registerCommand(CommandConst.TEMPLATE.PUBLISH, this.execute, this);
   }
 
   protected async execute(): Promise<void> {

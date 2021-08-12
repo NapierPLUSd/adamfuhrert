@@ -14,7 +14,7 @@ import { CoreAPI } from '../../service';
  */
 export class SystemPublishCommand {
   constructor() {
-    commands.registerCommand(CommandConst.SYSTEM.PUBLISH, this.execute.bind(this));
+    commands.registerCommand(CommandConst.SYSTEM.PUBLISH, this.execute, this);
   }
 
   protected async execute(): Promise<void> {
@@ -36,7 +36,7 @@ export class SystemPublishCommand {
     if (!sysRun) {
       return;
     }
-    return window.withProgress({ location: ProgressLocation.SourceControl, title: '系统发布' }, progress => {
+    return window.withProgress({ location: ProgressLocation.Notification, title: '系统发布' }, progress => {
       return new Promise(resolve => {
         setTimeout(async () => {
           progress.report({ message: '正在建立发布任务...' });

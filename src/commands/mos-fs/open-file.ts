@@ -19,7 +19,7 @@ export class OpenFileCommand {
   }
 
   constructor() {
-    commands.registerCommand(CommandConst.MOS_FS.OPEN_FILE, this.execute.bind(this));
+    commands.registerCommand(CommandConst.MOS_FS.OPEN_FILE, this.execute, this);
   }
 
   protected async execute(param: Entry | PSMosFile | string): Promise<void> {

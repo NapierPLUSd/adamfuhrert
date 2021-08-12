@@ -4,7 +4,7 @@ import { wsOutput } from '../../terminal';
 
 export class SystemInfoTerminalShowCommand {
   constructor() {
-    commands.registerCommand(CommandConst.SYSTEM_INFO_TERMINAL.SHOW, this.execute.bind(this));
+    commands.registerCommand(CommandConst.SYSTEM_INFO_TERMINAL.SHOW, this.execute, this);
   }
 
   protected async execute(): Promise<void> {
