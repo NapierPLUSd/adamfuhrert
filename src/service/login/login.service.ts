@@ -98,7 +98,7 @@ export class LoginService {
       return;
     }
     ctx.extensionContext.subscriptions.push(window.registerUriHandler(this.uriHandle));
-    ctx.extensionContext.subscriptions.push(commands.registerCommand(CommandConst.USER.LOGIN_REPLY_PATH_HANDLE, this.loginReplyPathHandle.bind(this)));
+    ctx.extensionContext.subscriptions.push(commands.registerCommand(CommandConst.USER.LOGIN_REPLY_PATH_HANDLE, this.loginReplyPathHandle, this));
     this.isInit = true;
   }
 
