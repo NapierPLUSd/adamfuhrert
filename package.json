@@ -60,6 +60,24 @@
         }
       },
       {
+        "command": "ibiz-modeling-studio.system.run-task.refresh",
+        "title": "%command.ibiz-modeling-studio.system.run-task.refresh%",
+        "category": "%command.ibiz-modeling-studio.category%",
+        "icon": {
+          "dark": "resources/icon/dark/refresh.svg",
+          "light": "resources/icon/light/refresh.svg"
+        }
+      },
+      {
+        "command": "ibiz-modeling-studio.system.run-task.cancel",
+        "title": "%command.ibiz-modeling-studio.system.run-task.cancel%",
+        "category": "%command.ibiz-modeling-studio.category%",
+        "icon": {
+          "dark": "resources/icon/dark/cancel.svg",
+          "light": "resources/icon/light/cancel.svg"
+        }
+      },
+      {
         "command": "ibiz-modeling-studio.template.publish",
         "title": "%command.ibiz-modeling-studio.template.publish%",
         "category": "%command.ibiz-modeling-studio.category%",
@@ -147,77 +165,93 @@
       "view/title": [
         {
           "command": "ibiz-modeling-studio.open-ibiz-modeling",
-          "when": "view == iBizExplorer.ModelExpTree",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree",
           "group": "navigation@10"
         },
         {
           "command": "ibiz-modeling-studio.gitlab.open-project",
-          "when": "view == iBizExplorer.ModelExpTree",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree",
           "group": "navigation@20"
         },
         {
           "command": "ibiz-modeling-studio.mos-fs.open-model-by-path",
-          "when": "view == iBizExplorer.ModelExpTree",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree",
           "group": "navigation@30"
         },
         {
           "command": "ibiz-modeling-studio.mos-fs.search-entity",
-          "when": "view == iBizExplorer.ModelExpTree",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree",
           "group": "navigation@40"
         },
         {
           "command": "ibiz-modeling-studio.system-info-terminal.show",
-          "when": "view == iBizExplorer.ModelExpTree",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree",
           "group": "navigation@50"
         },
         {
           "command": "ibiz-modeling-studio.system.publish.code",
-          "when": "view == iBizExplorer.ModelExpTree",
-          "group": "1_ibiz_modeling"
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree",
+          "group": "1_ibiz_modeling_model_exp_tree"
         },
         {
           "command": "ibiz-modeling-studio.template.publish",
-          "when": "view == iBizExplorer.ModelExpTree",
-          "group": "1_ibiz_modeling"
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree",
+          "group": "1_ibiz_modeling_model_exp_tree"
+        },
+        {
+          "command": "ibiz-modeling-studio.system.run-task.refresh",
+          "when": "view == ibiz-modeling-studio-explorer.system-task",
+          "group": "navigation@10"
+        },
+        {
+          "command": "ibiz-modeling-studio.system.run-task.cancel",
+          "when": "view == ibiz-modeling-studio-explorer.system-task",
+          "group": "navigation@20"
         }
       ],
       "view/item/context": [
         {
           "command": "ibiz-modeling-studio.gitlab.open-wiki",
-          "when": "view == iBizExplorer.ModelExpTree && viewItem == MODEL",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree && viewItem == MODEL",
           "group": "inline@10"
         },
         {
           "command": "ibiz-modeling-studio.mos-fs.open-runtime",
-          "when": "view == iBizExplorer.ModelExpTree && viewItem == MODEL",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree && viewItem == MODEL",
           "group": "inline@20"
         },
         {
           "command": "ibiz-modeling-studio.mos-fs.open-file",
-          "when": "view == iBizExplorer.ModelExpTree && viewItem == MODEL",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree && viewItem == MODEL",
           "group": "inline@30"
         },
         {
           "command": "ibiz-modeling-studio.mos-fs.copy-path",
-          "when": "view == iBizExplorer.ModelExpTree && viewItem == MODEL"
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree && viewItem == MODEL"
         }
       ]
     },
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "ibiz-modeling-studio_explorer",
+          "id": "ibiz-modeling-studio-explorer",
           "title": "%global.ibiz-modeling-studio.title%",
           "icon": "resources/icon/logo.svg"
         }
       ]
     },
     "views": {
-      "ibiz-modeling-studio_explorer": [
+      "ibiz-modeling-studio-explorer": [
         {
-          "id": "iBizExplorer.ModelExpTree",
-          "name": "",
+          "id": "ibiz-modeling-studio-explorer.model-exp-tree",
+          "name": "模型导航",
+          "contextualTitle": "%global.ibiz-modeling-studio.title%",
           "icon": "resources/icon/logo.svg",
+          "when": "ibiz-modeling-studio.enable-plugin == true"
+        },
+        {
+          "id": "ibiz-modeling-studio-explorer.system-task",
+          "name": "系统任务",
           "when": "ibiz-modeling-studio.enable-plugin == true"
         }
       ]
