@@ -18,7 +18,7 @@ export class SystemTask {
    * @date 2021-12-14 09:12:25
    * @see 实现 {@link SystemTaskProvider.refresh}
    */
-  readonly REFRESH = 'command.ibiz-modeling-studio.system.run-task.refresh';
+  readonly REFRESH = 'ibiz-modeling-studio.system.run-task.refresh';
   /**
    * 运行系统任务
    *
@@ -26,5 +26,5 @@ export class SystemTask {
    * @date 2021-12-14 09:12:30
    * @see 实现 {@link SystemTaskProvider.cancel}
    */
-  readonly CANCEL = 'command.ibiz-modeling-studio.system.run-task.cancel';
+  readonly CANCEL = 'ibiz-modeling-studio.system.run-task.cancel';
 }

@@ -60,7 +60,7 @@ export async function asyncActivate(context: ExtensionContext): Promise<void> {
     const appData = (await serviceApi.getAppData()) as Record<string, string>;
     if (notNilEmpty(appData)) {
       // 初始化 mqtt 服务
-      ctx.setWS(new Websocket({ psdsconsoleurl: appData.psdsconsoleurl, psdevslnsysid: appData.psdevslnsysid }));
+      ctx.ws.start({ psdsconsoleurl: appData.psdsconsoleurl, psdevslnsysid: appData.psdevslnsysid });
       // 初始化系统 output terminal
       wsOutput.init(ctx.ws, ctx.get('psdevslnsysname') || '未知');
     }

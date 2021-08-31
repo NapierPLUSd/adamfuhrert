@@ -143,11 +143,17 @@ export class Websocket {
    * @memberof Websocket
    */
   protected psdsconsoleid?: string;
+
   /**
-   * Creates an instance of Websocket.
-   * @memberof Websocket
+   * 启动 ws
+   *
+   * @author chitanda
+   * @date 2021-12-14 11:12:26
+   * @param {{ psdsconsoleurl: string; psdcconsoleid?: string; psdevslnsysid?: string; psdsconsoleid?: string }} [params]
+   * @param {*} [opt={}]
+   * @return {*}
    */
-  constructor(params?: { psdsconsoleurl: string; psdcconsoleid?: string; psdevslnsysid?: string; psdsconsoleid?: string }, opt: any = {}) {
+  start(params?: { psdsconsoleurl: string; psdcconsoleid?: string; psdevslnsysid?: string; psdsconsoleid?: string }, opt: any = {}) {
     if (params) {
       this.url = params.psdsconsoleurl;
       this.psdcconsoleid = params.psdcconsoleid;
@@ -164,6 +170,7 @@ export class Websocket {
     }
     return this;
   }
+
   /**
    * 注册事件
    *
@@ -332,6 +339,64 @@ export class Websocket {
   consoleLocal(observer: (content: any) => void): string {
     const key: string = createUUID();
     this.unsubscribeCache.set(key, [this.current.console.subscribeLocal(observer)]);
+    return key;
+  }
+
+  /**
+   * 订阅command
+   *
+   * @param {(content: any) => void} observer 回调函数
+   * @param {('update' | 'remove' | 'create')} [subtype] 更新类型
+   * @param {string} [deName] 实体名称
+   * @returns {string}
+   * @memberof AppCommunicationsCenter
+   */
+  public command(observer: (content: any) => void, subtype?: 'update' | 'remove' | 'create' | 'all', deName?: string): string {
+    const arr: any[] = [];
+    if (Object.is(subtype, 'update')) {
+      arr.push(this.central.command.update.subscribe(observer, deName));
+      arr.push(this.system.command.update.subscribe(observer, deName));
+      arr.push(this.current.command.update.subscribe(observer, deName));
+    } else if (Object.is(subtype, 'remove')) {
+      arr.push(this.central.command.remove.subscribe(observer, deName));
+      arr.push(this.system.command.remove.subscribe(observer, deName));
+      arr.push(this.current.command.remove.subscribe(observer, deName));
+    } else if (Object.is(subtype, 'create')) {
+      arr.push(this.central.command.create.subscribe(observer, deName));
+      arr.push(this.system.command.create.subscribe(observer, deName));
+      arr.push(this.current.command.create.subscribe(observer, deName));
+    } else {
+      arr.push(this.central.command.subscribe(observer, deName));
+      arr.push(this.system.command.subscribe(observer, deName));
+      arr.push(this.current.command.subscribe(observer, deName));
+    }
+    const key: string = createUUID();
+    this.unsubscribeCache.set(key, arr);
+    return key;
+  }
+
+  /**
+   * 订阅command
+   *
+   * @param {(content: any) => void} observer 回调函数
+   * @param {('update' | 'remove' | 'create')} [subtype] 更新类型
+   * @param {string} [deName] 实体名称
+   * @returns {string}
+   * @memberof AppCommunicationsCenter
+   */
+  public commandLocal(observer: (content: any) => void, subtype?: 'update' | 'remove' | 'create' | 'all', deName?: string): string {
+    const arr: any[] = [];
+    if (Object.is(subtype, 'update')) {
+      arr.push(this.current.command.update.subscribeLocal(observer, deName));
+    } else if (Object.is(subtype, 'remove')) {
+      arr.push(this.current.command.remove.subscribeLocal(observer, deName));
+    } else if (Object.is(subtype, 'create')) {
+      arr.push(this.current.command.create.subscribeLocal(observer, deName));
+    } else {
+      arr.push(this.current.command.subscribeLocal(observer, deName));
+    }
+    const key: string = createUUID();
+    this.unsubscribeCache.set(key, arr);
     return key;
   }
 }

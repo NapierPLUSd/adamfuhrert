@@ -354,4 +354,5 @@ export function initCtx(context: ExtensionContext): void {
   // 初始化 MosFS 虚拟文件系统并设置到上下文中
   const iBizMosFSCustom = new IBizMosFSCustom();
   ctx.setMosFS(iBizMosFSCustom);
+  ctx.setWS(new Websocket());
 }
