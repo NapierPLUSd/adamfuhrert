@@ -59,9 +59,9 @@ export function showErrInfo(err: any) {
     const data = err.response.data;
     const parameters = data.parameters;
     if (parameters && parameters.exmessage) {
-      window.showErrorMessage(parameters.exmessage);
+      window.showErrorMessage(`${data.status}: ${parameters.exmessage}`);
     } else {
-      window.showErrorMessage(data.message);
+      window.showErrorMessage(`${data.status}: ${data.message}`);
     }
   } else {
     window.showErrorMessage(err.message);

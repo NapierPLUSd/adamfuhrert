@@ -1,6 +1,7 @@
 import { ctx } from '../../../context';
 import { readFileSync } from 'fs-extra';
 import { join } from 'path';
+import { Uri } from 'vscode';
 
 /**
  * 资源目录文件帮助类
@@ -49,5 +50,19 @@ export class ResourcesFileUtil {
     const uri = ctx.extensionContext.extensionUri;
     path = join(uri.fsPath, 'resources', path);
     return readFileSync(path, 'utf-8');
+  }
+
+  /**
+   * 生成插件资源文件 Uri
+   *
+   * @author chitanda
+   * @date 2021-12-14 11:12:33
+   * @param {string} path
+   * @return {*}  {Uri}
+   */
+  resolveResourceUri(path: string): Uri {
+    const uri = ctx.extensionContext.extensionUri;
+    const fullPath = join(uri.fsPath, 'resources', path);
+    return Uri.file(fullPath);
   }
 }

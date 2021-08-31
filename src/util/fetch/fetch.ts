@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { notNilEmpty } from '../utils/utils';
 import { URLSearchParams } from 'url';
 import { ctx } from '../../context';
@@ -12,13 +12,13 @@ import { ctx } from '../../context';
  * @class Fetch
  */
 export class Fetch {
-  static post(url: string, data: any = {}, urlParams: any = {}, config?: AxiosRequestConfig): Promise<any> {
+  static post(url: string, data: any = {}, urlParams: any = {}, config?: AxiosRequestConfig): Promise<AxiosResponse> {
     url = this.urlParamsParse(url, urlParams);
     config = this.configParse(url, config);
     return axios.post(url, data, config);
   }
 
-  static get(url: string, urlParams: any = {}, config?: AxiosRequestConfig): Promise<any> {
+  static get(url: string, urlParams: any = {}, config?: AxiosRequestConfig): Promise<AxiosResponse> {
     url = this.urlParamsParse(url, urlParams);
     config = this.configParse(url, config);
     return axios.get(url, config);
