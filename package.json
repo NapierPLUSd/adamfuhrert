@@ -190,13 +190,13 @@
         },
         {
           "command": "ibiz-modeling-studio.system.publish.code",
-          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree",
-          "group": "1_ibiz_modeling_model_exp_tree"
+          "when": "view == ibiz-modeling-studio-explorer.system-task",
+          "group": "1_ibiz_modeling_system_run_task"
         },
         {
           "command": "ibiz-modeling-studio.template.publish",
-          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree",
-          "group": "1_ibiz_modeling_model_exp_tree"
+          "when": "view == ibiz-modeling-studio-explorer.system-task",
+          "group": "1_ibiz_modeling_system_run_task"
         },
         {
           "command": "ibiz-modeling-studio.system.run-task.refresh",
