@@ -9,18 +9,24 @@
 
 ### Added
 
+- 系统任务栏：
+  - 展示当前系统运行任务
+  - 可以 刷新、取消 当前运行的任务
 - 模型树导航：
   - 项：打开对应路径的 wiki 界面
 - 命令(Command)
   - 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
   - 打开 wiki（Open Wiki）：command.ibiz-modeling-studio.gitlab.open-wiki
   - 打开项目 GitLab（Open Project GitLab）：ibiz-modeling-studio.gitlab.open-project
+  - 刷新系统任务（Refresh System Tasks）: command.ibiz-modeling-studio.system.run-task.refresh
+  - 取消系统任务（Cancel System Tasks）: command.ibiz-modeling-studio.system.run-task.cancel
 - .ibizproject 文件
   - 新增：git-remote 参数
 
 ### Changed
 
 - 代码发布：由原来的默认配置发布，改为使用选择配置好的系统运行信息。[df5342e1fe1d53c7593ce08a733e950c41d65b39](https://gitee.com/iBizModeling/ibiz-modeling-studio/commit/df5342e1fe1d53c7593ce08a733e950c41d65b39)
+- 补充命令具体实现注解。[2f6561c816806f5f09dbfc1e1cac827718a306a7](https://gitee.com/iBizModeling/ibiz-modeling-studio/commit/2f6561c816806f5f09dbfc1e1cac827718a306a7)
 
 ## [0.0.1] - 2021-12-10
 
