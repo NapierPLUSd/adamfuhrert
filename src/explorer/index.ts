@@ -1,5 +1,7 @@
 import { ExtensionContext } from 'vscode';
 import { ModelExpTree } from './model-exp/model-exp';
+import { SystemTask } from './system-task/system-task';
+
 
 /**
  * 安装 资源管理器
@@ -11,4 +13,5 @@ import { ModelExpTree } from './model-exp/model-exp';
  */
 export function installExplorer(context: ExtensionContext): void {
   new ModelExpTree(context);
+  new SystemTask(context);
 }
