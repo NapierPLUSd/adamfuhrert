@@ -64,14 +64,13 @@ export class ServiceApiService {
    * @param {string[]} keys 需要取消的任务组
    * @return {*}  {Promise<boolean>}
    */
-  async cancelSystemRun(keys: string[]): Promise<boolean> {
+  async cancelSystemRun(_keys: string[]): Promise<boolean> {
     try {
       const psDevSlnSys: string = ctx.get('psdevslnsys')!;
-      const res = await Fetch.post(
-        `${ctx.studioAddress}/MosDynamic/pssysdevbktasks/cancel`,
-        { psdevslnsysid: psDevSlnSys, keys: keys.join(';') },
-        { headers: { 'content-type': 'application/json', psdevslnsys: psDevSlnSys } },
-      );
+      const config = {
+        headers: { 'content-type': 'application/json', psdevslnsys: psDevSlnSys },
+      };
+      const res = await Fetch.post(`${ctx.studioAddress}/MosDynamic/pssysdevbktasks/null/cancelalltask`, undefined, undefined, config);
       if (res?.status === 200) {
         return res.data;
       }
