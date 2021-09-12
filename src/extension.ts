@@ -8,7 +8,6 @@ import { installLanguages } from './languages';
 import { login, serviceApi } from './service';
 import { wsOutput } from './terminal';
 import { Interceptor, isNilOrEmpty, notNilEmpty } from './util';
-import { Websocket } from './ws';
 
 export function activate(context: ExtensionContext): void {
   // 初始化插件上下文

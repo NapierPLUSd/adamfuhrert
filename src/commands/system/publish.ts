@@ -40,10 +40,7 @@ export class SystemPublishCommand {
       return new Promise(resolve => {
         setTimeout(async () => {
           progress.report({ message: '正在建立发布任务...' });
-          const res = await CoreAPI.cli('ExecuteSysCLICmd', { pstscmdname: 'devsys_pubcode', psdevslnsysid: psDevSlnSys, data: { sysrun: sysRun.data.pssystemrunname } });
-          if (res) {
-            window.showInformationMessage(`已建立 <${ctx.get('psdevslnsysname')}> 系统代码发布`);
-          }
+          await CoreAPI.cli('ExecuteSysCLICmd', { pstscmdname: 'devsys_pubcode', psdevslnsysid: psDevSlnSys, data: { sysrun: sysRun.data.pssystemrunname } });
           resolve();
         }, 300);
       });

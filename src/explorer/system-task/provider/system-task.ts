@@ -1,4 +1,4 @@
-import { commands, Event, EventEmitter, ExtensionContext, TreeDataProvider, window } from 'vscode';
+import { commands, Event, EventEmitter, ExtensionContext, StatusBarAlignment, StatusBarItem, TreeDataProvider, window } from 'vscode';
 import { CommandConst } from '../../../constants';
 import { ctx } from '../../../context';
 import { IPSData } from '../../../interface';
@@ -20,8 +20,12 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
 
   protected items: IPSData[] = [];
 
+  protected statusBar: StatusBarItem;
+
   constructor(protected context: ExtensionContext) {
     this.init();
+    this.statusBar = window.createStatusBarItem(StatusBarAlignment.Right, 10);
+    this.statusBar.text = '任务';
   }
 
   protected init(): void {
@@ -44,6 +48,17 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
     commands.registerCommand(CommandConst.SYSTEM.TASK.CANCEL, this.cancel, this);
   }
 
+  protected changeStatusBar(): void {
+    if (this.items.length > 0) {
+      const runs = this.items.filter(item => item.taskstate === 20);
+      const bar = this.statusBar;
+      bar.text = `$(loading~spin) 执行中：${runs.map(run => run.pssysdevbktaskname).join(' > ')}`;
+      bar.show();
+    } else {
+      this.statusBar.hide();
+    }
+  }
+
   /**
    * 刷新任务
    *
@@ -53,6 +68,8 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
    * @return {*}  {Promise<void>}
    */
   protected async refresh(): Promise<void> {
+    await this.loadTasks();
+    this.changeStatusBar();
     this.evt.fire(undefined);
   }
 
@@ -98,7 +115,7 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
     return treeItem;
   }
 
-  getChildren(): Promise<IPSData[]> {
-    return this.loadTasks();
+  async getChildren(): Promise<IPSData[]> {
+    return this.items;
   }
 }
