@@ -49,13 +49,15 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
   }
 
   protected changeStatusBar(): void {
+    const bar = this.statusBar;
     if (this.items.length > 0) {
       const runs = this.items.filter(item => item.taskstate === 20);
-      const bar = this.statusBar;
       bar.text = `$(loading~spin) 执行中：${runs.map(run => run.pssysdevbktaskname).join(' > ')}`;
+      bar.tooltip = `点击打开任务信息栏`;
       bar.show();
     } else {
-      this.statusBar.hide();
+      bar.text = '';
+      bar.hide();
     }
   }
 
