@@ -54,7 +54,7 @@ export function getNonce(): string {
  * @export
  * @param {*} err
  */
-export function showErrInfo(err: any) {
+export function showErrInfo(err: any): void {
   if (err.response) {
     const data = err.response.data;
     const parameters = data.parameters;
@@ -66,6 +66,31 @@ export function showErrInfo(err: any) {
   } else {
     window.showErrorMessage(err.message);
   }
+}
+
+/**
+ * 获取异常中的错误信息
+ *
+ * @author chitanda
+ * @date 2021-12-15 10:12:58
+ * @export
+ * @param {*} err
+ * @return {*}  {string}
+ */
+export function getErrMessage(err: any): string {
+  if (err) {
+    if (err.response) {
+      const data = err.response.data;
+      const parameters = data.parameters;
+      if (parameters && parameters.exmessage) {
+        return parameters.exmessage;
+      } else {
+        return data.message;
+      }
+    }
+    return err.message;
+  }
+  return '';
 }
 
 /**
