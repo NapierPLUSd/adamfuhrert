@@ -1,8 +1,10 @@
-import { commands, ProgressLocation, window } from 'vscode';
+import { commands, window } from 'vscode';
 import { CommandConst } from '../../constants';
 import { ctx } from '../../context';
 import { SystemRunPickItem } from '../../entities';
 import { CoreAPI } from '../../service';
+import { taskBar } from '../../status-bar';
+import { getErrMessage } from '../../util';
 
 /**
  * 系统发布
@@ -36,14 +38,10 @@ export class SystemPublishCommand {
     if (!sysRun) {
       return;
     }
-    return window.withProgress({ location: ProgressLocation.Notification, title: '系统发布' }, progress => {
-      return new Promise(resolve => {
-        setTimeout(async () => {
-          progress.report({ message: '正在建立发布任务...' });
-          await CoreAPI.cli('ExecuteSysCLICmd', { pstscmdname: 'devsys_pubcode', psdevslnsysid: psDevSlnSys, data: { sysrun: sysRun.data.pssystemrunname } });
-          resolve();
-        }, 300);
-      });
-    });
+    taskBar.warn({ text: `$(loading~spin) 正在建立发布任务` });
+    const res = await CoreAPI.cli('ExecuteSysCLICmd', { pstscmdname: 'devsys_pubcode', psdevslnsysid: psDevSlnSys, data: { sysrun: sysRun.data.pssystemrunname } });
+    if (res && res.status !== 200) {
+      taskBar.hide();
+    }
   }
 }

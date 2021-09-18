@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { AxiosRequestConfig } from 'axios';
 import { ctx } from '../../context';
 import { CliAPIData } from '../../interface';
@@ -35,6 +36,7 @@ export class CoreAPI {
       return res;
     } catch (err: any) {
       showErrInfo(err);
+      return err;
     }
   }
 
@@ -82,7 +84,7 @@ export class CoreAPI {
     try {
       const config: AxiosRequestConfig<unknown> = {
         headers: {
-          'psdevslnsys': ctx.get('psdevslnsys') as string,
+          psdevslnsys: ctx.get('psdevslnsys') as string,
           'content-type': 'application/json;charset=UTF-8',
         },
       };

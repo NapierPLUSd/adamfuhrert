@@ -251,7 +251,7 @@
         },
         {
           "id": "ibiz-modeling-studio-explorer.system-task",
-          "name": "系统任务",
+          "name": "系统后台任务",
           "when": "ibiz-modeling-studio.enable-plugin == true"
         }
       ]

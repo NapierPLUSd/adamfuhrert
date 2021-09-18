@@ -1,8 +1,10 @@
-import { commands, Event, EventEmitter, ExtensionContext, StatusBarAlignment, StatusBarItem, TreeDataProvider, window } from 'vscode';
+import { commands, Event, EventEmitter, ExtensionContext, TreeDataProvider, window } from 'vscode';
 import { CommandConst } from '../../../constants';
 import { ctx } from '../../../context';
 import { IPSData } from '../../../interface';
 import { serviceApi } from '../../../service';
+import { taskBar } from '../../../status-bar';
+import { notNilEmpty } from '../../../util';
 import { SystemTaskItem } from '../system-task-item/system-task-item';
 
 /**
@@ -18,14 +20,19 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
   private evt: EventEmitter<any> = new EventEmitter<any>();
   onDidChangeTreeData: Event<void | IPSData | null | undefined> = this.evt.event;
 
-  protected items: IPSData[] = [];
+  /**
+   * 是否为第一次，第一次的时候默认预加载一次。其余按照事件触发，加载数据
+   *
+   * @author chitanda
+   * @date 2021-12-15 14:12:44
+   * @protected
+   */
+  protected first = true;
 
-  protected statusBar: StatusBarItem;
+  protected items: IPSData[] = [];
 
   constructor(protected context: ExtensionContext) {
     this.init();
-    this.statusBar = window.createStatusBarItem(StatusBarAlignment.Right, 10);
-    this.statusBar.text = '任务';
   }
 
   protected init(): void {
@@ -49,15 +56,31 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
   }
 
   protected changeStatusBar(): void {
-    const bar = this.statusBar;
     if (this.items.length > 0) {
-      const runs = this.items.filter(item => item.taskstate === 20);
-      bar.text = `$(loading~spin) 执行中：${runs.map(run => run.pssysdevbktaskname).join(' > ')}`;
-      bar.tooltip = `点击打开任务信息栏`;
-      bar.show();
+      const runs = this.items.filter(item => {
+        return item.taskstate === 20;
+      });
+      if (runs.length > 0) {
+        taskBar.info({
+          text: `$(loading~spin) 执行中：${runs.map(run => run.pssysdevbktaskname).join(' > ')}`,
+          tooltip: `打开系统后台任务管理`,
+        });
+        return;
+      } else {
+        const item = this.items[0];
+        const info: string = item.queueinfo;
+        if (notNilEmpty(info) && info.startsWith('正在等待调度,')) {
+          taskBar.warn({
+            text: `$(loading~spin) 代码发布：${info}`,
+          });
+          return;
+        }
+      }
+      taskBar.info({
+        text: `$(loading~spin) 代码发布：等待中`,
+      });
     } else {
-      bar.text = '';
-      bar.hide();
+      taskBar.hide();
     }
   }
 
@@ -102,6 +125,7 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
    * @return {*}  {Promise<IPSData[]>}
    */
   protected async loadTasks(): Promise<IPSData[]> {
+    this.first = false;
     const items = await serviceApi.getSystemRun();
     this.items = items.sort((a, b) => {
       if (a.ordervalue > b.ordervalue) {
@@ -118,6 +142,9 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
   }
 
   async getChildren(): Promise<IPSData[]> {
+    if (this.first) {
+      await this.refresh();
+    }
     return this.items;
   }
 }
