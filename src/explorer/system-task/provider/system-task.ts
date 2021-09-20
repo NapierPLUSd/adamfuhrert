@@ -1,5 +1,5 @@
-import { commands, Event, EventEmitter, ExtensionContext, TreeDataProvider, window } from 'vscode';
-import { CommandConst } from '../../../constants';
+import { commands, Event, EventEmitter, ExtensionContext, ProviderResult, TreeDataProvider, window } from 'vscode';
+import { CommandConst, RTContextConst } from '../../../constants';
 import { ctx } from '../../../context';
 import { IPSData } from '../../../interface';
 import { serviceApi } from '../../../service';
@@ -57,13 +57,14 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
 
   protected changeStatusBar(): void {
     if (this.items.length > 0) {
+      ctx.setContext(RTContextConst.PUBLISH_CODE, true);
       const runs = this.items.filter(item => {
         return item.taskstate === 20;
       });
       if (runs.length > 0) {
         taskBar.info({
           text: `$(loading~spin) 执行中：${runs.map(run => run.pssysdevbktaskname).join(' > ')}`,
-          tooltip: `打开系统后台任务管理`,
+          tooltip: `请在系统后台任务中查看详情`,
         });
         return;
       } else {
@@ -71,15 +72,16 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
         const info: string = item.queueinfo;
         if (notNilEmpty(info) && info.startsWith('正在等待调度,')) {
           taskBar.warn({
-            text: `$(loading~spin) 代码发布：${info}`,
+            text: `$(loading~spin) 后台任务：${item.pssysdevbktaskname} - ${info}`,
           });
           return;
         }
       }
       taskBar.info({
-        text: `$(loading~spin) 代码发布：等待中`,
+        text: `$(loading~spin) 后台任务：等待中`,
       });
     } else {
+      ctx.setContext(RTContextConst.PUBLISH_CODE, false);
       taskBar.hide();
     }
   }
@@ -146,5 +148,9 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
       await this.refresh();
     }
     return this.items;
+  }
+
+  getParent(_element: IPSData): ProviderResult<IPSData> {
+    return undefined;
   }
 }

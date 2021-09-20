@@ -54,6 +54,7 @@
         "command": "ibiz-modeling-studio.system.publish.code",
         "title": "%command.ibiz-modeling-studio.system.publish.code%",
         "category": "%command.ibiz-modeling-studio.category%",
+        "enablement": "ibiz-modeling-studio.publishing-code == false",
         "icon": {
           "dark": "resources/icon/dark/code-publish.svg",
           "light": "resources/icon/light/code-publish.svg"

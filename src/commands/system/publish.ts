@@ -1,5 +1,5 @@
 import { commands, window } from 'vscode';
-import { CommandConst } from '../../constants';
+import { CommandConst, RTContextConst } from '../../constants';
 import { ctx } from '../../context';
 import { SystemRunPickItem } from '../../entities';
 import { CoreAPI } from '../../service';
@@ -38,10 +38,12 @@ export class SystemPublishCommand {
     if (!sysRun) {
       return;
     }
+    ctx.setContext(RTContextConst.PUBLISH_CODE, true);
     taskBar.warn({ text: `$(loading~spin) 正在建立发布任务` });
     const res = await CoreAPI.cli('ExecuteSysCLICmd', { pstscmdname: 'devsys_pubcode', psdevslnsysid: psDevSlnSys, data: { sysrun: sysRun.data.pssystemrunname } });
     if (res && res.status !== 200) {
       taskBar.hide();
+      ctx.setContext(RTContextConst.PUBLISH_CODE, false);
     }
   }
 }
