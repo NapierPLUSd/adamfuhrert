@@ -73,6 +73,7 @@
         "command": "ibiz-modeling-studio.system.run-task.cancel",
         "title": "%command.ibiz-modeling-studio.system.run-task.cancel%",
         "category": "%command.ibiz-modeling-studio.category%",
+        "enablement": "ibiz-modeling-studio.publishing-code == true",
         "icon": {
           "dark": "resources/icon/dark/cancel.svg",
           "light": "resources/icon/light/cancel.svg"
