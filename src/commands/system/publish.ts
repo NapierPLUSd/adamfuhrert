@@ -44,6 +44,7 @@ export class SystemPublishCommand {
     pick.items = arr;
     pick.busy = false;
     pick.onDidChangeSelection(async items => {
+      pick.hide();
       if (items.length > 0) {
         const run = items[0];
         ctx.setContext(RTContextConst.PUBLISH_CODE, true);
@@ -54,7 +55,6 @@ export class SystemPublishCommand {
           ctx.setContext(RTContextConst.PUBLISH_CODE, false);
         }
       }
-      pick.hide();
     });
     pick.onDidTriggerButton(e => {
       if (e.tooltip === btnTooltip) {
