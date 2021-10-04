@@ -30,6 +30,8 @@ iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便�
    psdevslnsys: 913D11CB-B368-4589-845C-9B47308A02B4
    # 系统名称
    psdevslnsysname: iBiz产品生产管理系统
+   # 项目 git 地址
+   git-remote: https://gitee.com/iBizModeling/ibiz-modeling-studio.git
    ```
 
 2. 新建 vscode 窗口，快捷键：`Ctrl+Shift+N`
@@ -52,17 +54,22 @@ iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便�
 
 3. 识别`iBizModeling:/`域的模型路径跳转
 
-4. 模型导航树
+4. 模型导航
 
    - 打开 iBizModeling 工具
    - 根据路径打开模型
    - 查找实体
-   - 显示信息终端
-   - 代码发布
-   - 模板发布
    - 右键菜单：复制模型路径
 
-5. 内置设计界面
+5. 系统后台任务
+
+   - 刷新系统后台任务
+   - 取消正在执行的系统后台任务
+   - 显示信息终端
+   - 代码发布 - 选择发布任务执行，可点击按钮新建任务配置
+   - 模板发布
+
+6. 内置设计界面
 
    - 用例图
    - ER 图
@@ -79,18 +86,21 @@ iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便�
    - 面板
    - 数据看板
 
-6. 命令(Command)&nbsp;&ensp;快捷键：`Ctrl+Shift+P`
+7. 命令(Command)&nbsp;&ensp;快捷键：`Ctrl+Shift+P`
 
-   | 命令                      | 描述                     |
-   | :------------------------ | :----------------------- |
-   | Login                     | 登陆 iBizModeling 账户   |
-   | Logout                    | 登出 iBizModeling 账户   |
-   | Open iBizModeling Tool    | 打开 iBizModeling 工具   |
-   | Open Information Terminal | 显示系统信息终端         |
-   | Open Model By Path        | 根据路径打开模型配置界面 |
-   | Search Entity             | 搜索实体                 |
-   | Publish Code              | 发布代码                 |
-   | Publish Template          | 发布模板                 |
+   | 命令                                   | 描述                       |
+   | :------------------------------------- | :------------------------- |
+   | Login                                  | 登陆 iBizModeling 账户     |
+   | Logout                                 | 登出 iBizModeling 账户     |
+   | Open iBizModeling Tool                 | 打开 iBizModeling 工具     |
+   | Open Information Terminal              | 显示系统信息终端           |
+   | Open Model By Path                     | 根据路径打开模型配置界面   |
+   | Search Entity                          | 搜索实体                   |
+   | Publish Code                           | 发布代码                   |
+   | Open Wiki                              | 打开 wiki                  |
+   | Open Project GitLab                    | 打开项目 GitLab            |
+   | Refresh System Background Tasks        | 刷新系统后台任务           |
+   | Cancel Ongoing System Background Tasks | 取消正在执行的系统后台任务 |
 
 ## vscode 设置
 
@@ -129,25 +139,27 @@ iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便�
 
 <img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/QuickSearchEntity.gif' style='width: 100%'></img>
 
+#### 2. 系统后台任务基本功能
+
+代码发布
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishCode.gif' style='width: 100%'></img>
+
+模板发布
+
+<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishTemplate.gif' style='width: 100%'></img>
+
 系统日志信息终端
 
 <img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/SystemInfoTerminal.gif' style='width: 100%'></img>
 
-#### 2. 模型运行时查看
+#### 3. 模型运行时查看
 
 <img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/SystemModelRuntime.gif' style='width: 100%'></img>
 
-#### 3. 内置设计界面
+#### 4. 内置设计界面
 
 <img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/ModelDesignTool.gif' style='width: 100%'></img>
-
-#### 4. 代码发布
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishCode.gif' style='width: 100%'></img>
-
-#### 5. 发布模板
-
-<img src='https://cdn.ibizlab.cn/ibizsys-vscode-plugin/PublishTemplate.gif' style='width: 100%'></img>
 
 #### 6. 打开项目中的模型链接
 
@@ -184,3 +196,5 @@ iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便�
 ## 常见问题
 
 1. 出现 <font color=#eb445a>read ECONNRESET</font> 错误提示，请检查是否使用了翻墙软件。一般为 DNS 解析异常导致的。
+
+2. 无法弹出登录窗口，请检查 vscode 是否能够正常打开网页链接。
