@@ -7,19 +7,23 @@
 
 ## [Unreleased]
 
+- 命令(Command)
+  - 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
+
+## [0.0.8] - 2021-12-15
+
 ### Added
 
 - 系统任务栏：
   - 展示当前系统运行任务
   - 可以 刷新、取消 当前运行的任务
-- 模型树导航：
+- 模型导航：
   - 项：打开对应路径的 wiki 界面
 - 命令(Command)
-  - 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
   - 打开 wiki（Open Wiki）：command.ibiz-modeling-studio.gitlab.open-wiki
   - 打开项目 GitLab（Open Project GitLab）：ibiz-modeling-studio.gitlab.open-project
-  - 刷新系统任务（Refresh System Tasks）: command.ibiz-modeling-studio.system.run-task.refresh
-  - 取消系统任务（Cancel System Tasks）: command.ibiz-modeling-studio.system.run-task.cancel
+  - 刷新系统后台任务（Refresh System Background Tasks）: command.ibiz-modeling-studio.system.run-task.refresh
+  - 取消正在执行的系统后台任务（Cancel Ongoing System Background Tasks）: command.ibiz-modeling-studio.system.run-task.cancel
 - .ibizproject 文件
   - 新增：git-remote 参数
 
@@ -35,7 +39,7 @@
 - 登录
 - 系统信息终端
 - 识别文件中的 iBizModeling 路径
-- 模型树导航：
+- 模型导航：
   - 打开 iBizModeling 工具
   - 根据路径打开模型
   - 查找实体
