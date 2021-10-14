@@ -57,8 +57,10 @@ iBizModelingStudio 是 iBizSys 系统模型开发辅助工具，实现高效便�
 4. 模型导航
 
    - 打开 iBizModeling 工具
+   - 打开项目所在 GitLab
    - 根据路径打开模型
    - 查找实体
+   - 项：打开 wiki、打开运行时、编辑
    - 右键菜单：复制模型路径
 
 5. 系统后台任务
