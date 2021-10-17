@@ -6,6 +6,7 @@
   "command.ibiz-modeling-studio.open-ibiz-modeling": "Open iBizModeling Tool",
   "command.ibiz-modeling-studio.system-info-terminal.show": "Open Information Terminal",
   "command.ibiz-modeling-studio.system.publish.code": "Publish Code",
+  "command.ibiz-modeling-studio.system.run-task.all": "Run All Tasks",
   "command.ibiz-modeling-studio.system.run-task.refresh": "Refresh System Background Tasks",
   "command.ibiz-modeling-studio.system.run-task.cancel": "Cancel Ongoing System Background Tasks",
   "command.ibiz-modeling-studio.template.publish": "Publish Template",

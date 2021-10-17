@@ -80,6 +80,12 @@
         }
       },
       {
+        "command": "ibiz-modeling-studio.system.run-task.all",
+        "title": "%command.ibiz-modeling-studio.system.run-task.all%",
+        "category": "%command.ibiz-modeling-studio.category%",
+        "enablement": "ibiz-modeling-studio.publishing-code == false"
+      },
+      {
         "command": "ibiz-modeling-studio.template.publish",
         "title": "%command.ibiz-modeling-studio.template.publish%",
         "category": "%command.ibiz-modeling-studio.category%",
