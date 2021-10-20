@@ -2,7 +2,7 @@
 
 import { ctx } from '../../context';
 import { IPSData } from '../../interface';
-import { Fetch, showErrInfo } from '../../util';
+import { Fetch, notNilEmpty, showErrInfo } from '../../util';
 
 /**
  * MosDynamic 服务
@@ -73,6 +73,30 @@ export class ServiceApiService {
       const res = await Fetch.post(`${ctx.studioAddress}/MosDynamic/pssysdevbktasks/null/cancelalltask`, undefined, undefined, config);
       if (res?.status === 200) {
         return res.data;
+      }
+    } catch (err) {
+      showErrInfo(err);
+    }
+    return false;
+  }
+
+  /**
+   * 刷新应用发布缓存
+   *
+   * @author chitanda
+   * @date 2021-12-22 14:12:16
+   * @param {string} app
+   * @return {*}  {Promise<boolean>}
+   */
+  async refreshAppCache(app: string): Promise<boolean> {
+    try {
+      const psDevSlnSys: string = ctx.get('psdevslnsys')!;
+      const config = {
+        headers: { 'content-type': 'application/json', psdevslnsys: psDevSlnSys },
+      };
+      const res = await Fetch.put(`${ctx.studioAddress}/MosDynamic/pssysapps/${app}`, {}, undefined, config);
+      if (res?.status === 200 && res.data) {
+        return notNilEmpty(res.data.pssysappid);
       }
     } catch (err) {
       showErrInfo(err);

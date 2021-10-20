@@ -17,7 +17,8 @@ import { SystemTaskItem } from '../system-task-item/system-task-item';
  * @implements {TreeDataProvider<IPSData>}
  */
 export class SystemTaskProvider implements TreeDataProvider<IPSData> {
-  private evt: EventEmitter<any> = new EventEmitter<any>();
+  readonly evt: EventEmitter<any> = new EventEmitter<any>();
+
   onDidChangeTreeData: Event<void | IPSData | null | undefined> = this.evt.event;
 
   /**
@@ -41,13 +42,7 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
   }
 
   protected listenWSMessage(): void {
-    ctx.ws.command(
-      () => {
-        this.refresh();
-      },
-      'all',
-      'PSSYSDEVBKTASK',
-    );
+    ctx.ws.command(() => this.refresh(), 'all', 'PSSYSDEVBKTASK');
   }
 
   protected initCommand(): void {
@@ -118,6 +113,8 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
     }
   }
 
+  timer?: NodeJS.Timeout;
+
   /**
    * 加载任务信息
    *
@@ -127,15 +124,23 @@ export class SystemTaskProvider implements TreeDataProvider<IPSData> {
    * @return {*}  {Promise<IPSData[]>}
    */
   protected async loadTasks(): Promise<IPSData[]> {
-    this.first = false;
-    const items = await serviceApi.getSystemRun();
-    this.items = items.sort((a, b) => {
-      if (a.ordervalue > b.ordervalue) {
-        return 1;
+    return new Promise(resolve => {
+      if (this.timer) {
+        clearTimeout(this.timer);
+        this.timer = undefined;
       }
-      return -1;
+      this.timer = setTimeout(async () => {
+        this.first = false;
+        const items = await serviceApi.getSystemRun();
+        this.items = items.sort((a, b) => {
+          if (a.ordervalue > b.ordervalue) {
+            return 1;
+          }
+          return -1;
+        });
+        resolve(this.items);
+      }, 200);
     });
-    return this.items;
   }
 
   async getTreeItem(data: IPSData): Promise<SystemTaskItem> {

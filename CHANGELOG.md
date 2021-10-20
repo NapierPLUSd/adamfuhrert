@@ -10,6 +10,21 @@
 - 命令(Command)
   - 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
 
+## [0.0.9] - 2021-12-22
+
+### Added
+
+- 命令(Command)
+  - 执行系统任务（Run Task）：ibiz-modeling-studio.system.run-task.run
+  - 批量执行系统任务（Run Multiple Task）：ibiz-modeling-studio.system.run-task.multiple
+- 其他
+  - 在执行系统任务前，如果绑定应用。会去刷应用的缓存
+
+### Changed
+
+- 命令(Command)
+  - Publish Cod: 可多选任务，执行系统任务改为调用 Run Multiple Task 命令
+
 ## [0.0.8] - 2021-12-15
 
 ### Added

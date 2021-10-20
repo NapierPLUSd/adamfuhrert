@@ -12,8 +12,9 @@ import { ModelTreeItem } from '../model-tree-item/model-tree-item';
  * @implements {TreeDataProvider<Entry>}
  */
 export class ModelExpTreeProvider implements TreeDataProvider<Entry> {
-  private _onDidChangeTreeData: EventEmitter<any> = new EventEmitter<any>();
-  onDidChangeTreeData?: Event<void | Entry | null | undefined> | undefined = this._onDidChangeTreeData.event;
+  readonly evt: EventEmitter<any> = new EventEmitter<any>();
+
+  onDidChangeTreeData: Event<void | Entry | null | undefined> | undefined = this.evt.event;
 
   constructor(protected context: ExtensionContext, protected iBizMosFS: IBizMosFSCustom) {}
 

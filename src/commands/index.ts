@@ -13,6 +13,8 @@ import { SystemPublishCommand } from './system/publish';
 import { TemplatePublishCommand } from './template/publish';
 import { UserLoginCommand } from './user/login';
 import { UserLogoutCommand } from './user/logout';
+import { SystemRunTaskCommand } from './system-task/run';
+import { SystemRunMultipleTaskCommand } from './system-task/multiple';
 
 /**
  * 安装命令处理程序
@@ -39,6 +41,8 @@ export function installCommands(_context: ExtensionContext): void {
   {
     new SystemPublishCommand();
     new SystemInfoTerminalShowCommand();
+    new SystemRunTaskCommand();
+    new SystemRunMultipleTaskCommand();
   }
   // 模板相关
   {

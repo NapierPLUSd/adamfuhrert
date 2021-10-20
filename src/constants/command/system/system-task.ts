@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
 import { SystemTaskProvider } from '../../../explorer/system-task/provider/system-task';
-import { SystemRunAllTaskCommand } from '../../../commands/system-task/all';
+import { SystemRunTaskCommand } from '../../../commands/system-task/run';
+import { SystemRunMultipleTaskCommand } from '../../../commands/system-task/multiple';
 
 /**
  * 系统任务
@@ -17,9 +18,17 @@ export class SystemTask {
    *
    * @author chitanda
    * @date 2021-12-22 10:12:54
-   * @see 实现 {@link SystemRunAllTaskCommand.execute}
+   * @see 实现 {@link SystemRunTaskCommand.execute}
    */
-  readonly ALL = 'ibiz-modeling-studio.system.run-task.all';
+  readonly RUN = 'ibiz-modeling-studio.system.run-task.run';
+  /**
+   * 执行所有任务
+   *
+   * @author chitanda
+   * @date 2021-12-22 10:12:54
+   * @see 实现 {@link SystemRunMultipleTaskCommand.execute}
+   */
+  readonly MULTIPLE = 'ibiz-modeling-studio.system.run-task.multiple';
   /**
    * 刷新系统任务
    *

@@ -24,6 +24,12 @@ export class Fetch {
     return axios.get(url, config);
   }
 
+  static put(url: string, data: any = {}, urlParams: any = {}, config?: AxiosRequestConfig): Promise<AxiosResponse> {
+    url = this.urlParamsParse(url, urlParams);
+    config = this.configParse(url, config);
+    return axios.put(url, data, config);
+  }
+
   /**
    * 编辑请求参数
    *

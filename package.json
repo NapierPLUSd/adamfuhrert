@@ -80,10 +80,16 @@
         }
       },
       {
-        "command": "ibiz-modeling-studio.system.run-task.all",
-        "title": "%command.ibiz-modeling-studio.system.run-task.all%",
+        "command": "ibiz-modeling-studio.system.run-task.run",
+        "title": "%command.ibiz-modeling-studio.system.run-task.run%",
         "category": "%command.ibiz-modeling-studio.category%",
-        "enablement": "ibiz-modeling-studio.publishing-code == false"
+        "enablement": "false"
+      },
+      {
+        "command": "ibiz-modeling-studio.system.run-task.multiple",
+        "title": "%command.ibiz-modeling-studio.system.run-task.multiple%",
+        "category": "%command.ibiz-modeling-studio.category%",
+        "enablement": "false"
       },
       {
         "command": "ibiz-modeling-studio.template.publish",

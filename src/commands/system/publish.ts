@@ -1,9 +1,8 @@
 import { commands, Uri, window } from 'vscode';
-import { CommandConst, RTContextConst } from '../../constants';
+import { CommandConst } from '../../constants';
 import { ctx } from '../../context';
 import { SystemRunPickItem } from '../../entities';
 import { CoreAPI } from '../../service';
-import { taskBar } from '../../status-bar';
 import { FileUtil } from '../../util';
 
 /**
@@ -20,7 +19,6 @@ export class SystemPublishCommand {
   }
 
   protected async execute(): Promise<void> {
-    const psDevSlnSys = ctx.get('psdevslnsys');
     const pick = window.createQuickPick<SystemRunPickItem>();
     pick.title = '代码发布';
     pick.placeholder = '请选择需要运行的发布模式';
@@ -43,18 +41,11 @@ export class SystemPublishCommand {
     }
     pick.items = arr;
     pick.busy = false;
-    pick.onDidChangeSelection(async items => {
+    pick.canSelectMany = true;
+    pick.onDidAccept(async () => {
       pick.hide();
-      if (items.length > 0) {
-        const run = items[0];
-        ctx.setContext(RTContextConst.PUBLISH_CODE, true);
-        taskBar.warn({ text: `$(loading~spin) 正在建立发布任务` });
-        const res = await CoreAPI.cli('ExecuteSysCLICmd', { pstscmdname: 'devsys_pubcode', psdevslnsysid: psDevSlnSys, data: { sysrun: run.data.pssystemrunname } });
-        if (res && res.status !== 200) {
-          taskBar.hide();
-          ctx.setContext(RTContextConst.PUBLISH_CODE, false);
-        }
-      }
+      const items = pick.selectedItems;
+      commands.executeCommand(CommandConst.SYSTEM.TASK.MULTIPLE, items);
     });
     pick.onDidTriggerButton(e => {
       if (e.tooltip === btnTooltip) {
