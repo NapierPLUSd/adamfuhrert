@@ -3,7 +3,7 @@ import { IBizMOSService } from '../service/ibiz-mos.service';
 import { Directory } from '../entry/directory';
 import { File } from '../entry/file';
 import { FileExtensionConst, GlobalConst } from '../../../constants';
-import { MosFileUtil, showErrInfo } from '../../../util';
+import { MosFileUtil } from '../../../util';
 import { Entry } from '../entry';
 import { IBizModelFSCustomConfig } from '../../../config';
 import { PSMosFile } from '../../../entities';
