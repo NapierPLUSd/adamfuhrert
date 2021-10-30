@@ -25,4 +25,12 @@ export class ExplorerConst {
    * @static
    */
   static readonly SYSTEM_TASK = 'ibiz-modeling-studio-explorer.system-task';
+  /**
+   * 用户模板导航
+   *
+   * @author chitanda
+   * @date 2022-01-21 11:01:29
+   * @static
+   */
+  static readonly TEMPLATE_EXP_TREE = 'ibiz-modeling-studio-explorer.template-exp-tree';
 }

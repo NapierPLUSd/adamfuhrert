@@ -19,4 +19,11 @@ export class TemplateConst {
    * @see 实现 {@link TemplatePublishCommand.execute}
    */
   readonly PUBLISH = 'ibiz-modeling-studio.template.publish';
+  /**
+   * 打开模板代码
+   *
+   * @author chitanda
+   * @date 2022-01-21 14:01:18
+   */
+  readonly OPEN_GIT = 'ibiz-modeling-studio.template.open-git';
 }

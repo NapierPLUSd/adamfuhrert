@@ -11,6 +11,7 @@
   "command.ibiz-modeling-studio.system.run-task.refresh": "刷新系统后台任务",
   "command.ibiz-modeling-studio.system.run-task.cancel": "取消正在执行的系统后台任务",
   "command.ibiz-modeling-studio.template.publish": "发布模板",
+  "command.ibiz-modeling-studio.template.open-git": "打开模板代码",
   "command.ibiz-modeling-studio.mos-fs.copy-path": "复制路径",
   "command.ibiz-modeling-studio.mos-fs.open-file": "打开模型",
   "command.ibiz-modeling-studio.mos-fs.open-runtime": "打开运行时",

@@ -101,6 +101,15 @@
         }
       },
       {
+        "command": "ibiz-modeling-studio.template.open-git",
+        "title": "%command.ibiz-modeling-studio.template.open-git%",
+        "category": "%command.ibiz-modeling-studio.category%",
+        "icon": {
+          "dark": "resources/icon/dark/open.svg",
+          "light": "resources/icon/light/open.svg"
+        }
+      },
+      {
         "command": "ibiz-modeling-studio.mos-fs.copy-path",
         "title": "%command.ibiz-modeling-studio.mos-fs.copy-path%",
         "category": "%command.ibiz-modeling-studio.category%",
@@ -215,18 +224,13 @@
         {
           "command": "ibiz-modeling-studio.system.publish.code",
           "when": "view == ibiz-modeling-studio-explorer.system-task",
-          "group": "1_ibiz_modeling_system_run_task"
-        },
-        {
-          "command": "ibiz-modeling-studio.template.publish",
-          "when": "view == ibiz-modeling-studio-explorer.system-task",
-          "group": "1_ibiz_modeling_system_run_task"
+          "group": "navigation@40"
         }
       ],
       "view/item/context": [
         {
           "command": "ibiz-modeling-studio.gitlab.open-wiki",
-          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree && viewItem == MODEL",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree && viewItem == MODEL && false",
           "group": "inline@10"
         },
         {
@@ -242,6 +246,16 @@
         {
           "command": "ibiz-modeling-studio.mos-fs.copy-path",
           "when": "view == ibiz-modeling-studio-explorer.model-exp-tree && viewItem == MODEL"
+        },
+        {
+          "command": "ibiz-modeling-studio.template.open-git",
+          "when": "view == ibiz-modeling-studio-explorer.template-exp-tree",
+          "group": "inline@20"
+        },
+        {
+          "command": "ibiz-modeling-studio.template.publish",
+          "when": "view == ibiz-modeling-studio-explorer.template-exp-tree",
+          "group": "inline@20"
         }
       ]
     },
@@ -261,6 +275,11 @@
           "name": "模型导航",
           "contextualTitle": "%global.ibiz-modeling-studio.title%",
           "icon": "resources/icon/logo.svg",
+          "when": "ibiz-modeling-studio.enable-plugin == true"
+        },
+        {
+          "id": "ibiz-modeling-studio-explorer.template-exp-tree",
+          "name": "模板",
           "when": "ibiz-modeling-studio.enable-plugin == true"
         },
         {

@@ -16,27 +16,24 @@ export class TemplatePublishCommand {
     commands.registerCommand(CommandConst.TEMPLATE.PUBLISH, this.execute, this);
   }
 
-  protected async execute(): Promise<void> {
-    // 加载可刷新的模板
-    const promise = new Promise<readonly TemplatePickItem[]>(async resolve => {
-      const arr: TemplatePickItem[] = [];
-      const templates = await CoreAPI.curUserTemplates();
-      templates.forEach(item => {
-        arr.push(new TemplatePickItem(item));
-      });
-      resolve(arr);
-    });
+  /**
+   *
+   *
+   * @author chitanda
+   * @date 2022-01-21 14:01:53
+   * @protected
+   * @param {Record<string, string>} template 模板数据
+   * @return {*}  {Promise<void>}
+   */
+  protected async execute(template: Record<string, string>): Promise<void> {
     // 选择模板
-    const temp = await window.showQuickPick(promise, {
-      title: '发布模板',
-      placeHolder: '请选择需要发布的模板',
-    });
+    const temp = template;
     if (temp) {
       await window.withProgress({ location: ProgressLocation.Notification, title: '发布模板' }, async progress => {
         progress.report({ message: '正在发布模板...' });
-        const res = await CoreAPI.cli('ExecuteTemplCLICmd', { pstscmdname: 'devtempl_publish', psdevslntemplid: temp.data.psdevslntemplid });
+        const res = await CoreAPI.cli('ExecuteTemplCLICmd', { pstscmdname: 'devtempl_publish', psdevslntemplid: temp.psdevslntemplid });
         if (res) {
-          window.showInformationMessage(`发布成功: ${temp.label}`);
+          window.showInformationMessage(`模板发布成功`);
         }
       });
     }

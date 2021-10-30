@@ -3,6 +3,7 @@ import { ExplorerConst } from '../constants';
 import { ModelingExplorer } from '../interface';
 import { ModelExpTree } from './model-exp/model-exp';
 import { SystemTask } from './system-task/system-task';
+import { TemplateExp } from './template-exp/template-exp';
 
 // 已实例化的资源管理器
 const explorers: Map<string, ModelingExplorer<unknown>> = new Map();
@@ -18,6 +19,7 @@ const explorers: Map<string, ModelingExplorer<unknown>> = new Map();
 export function installExplorer(context: ExtensionContext): void {
   explorers.set(ExplorerConst.MODEL_EXP_TREE, new ModelExpTree(context));
   explorers.set(ExplorerConst.SYSTEM_TASK, new SystemTask(context));
+  explorers.set(ExplorerConst.TEMPLATE_EXP_TREE, new TemplateExp(context));
 }
 
 /**
@@ -42,6 +44,18 @@ export function getModelExpTree(): ModelExpTree {
  */
 export function getSystemTask(): SystemTask {
   return explorers.get(ExplorerConst.MODEL_EXP_TREE) as SystemTask;
+}
+
+/**
+ * 模板导航
+ *
+ * @author chitanda
+ * @date 2022-01-21 11:01:01
+ * @export
+ * @return {*}  {TemplateExp}
+ */
+export function getTemplateExp(): TemplateExp {
+  return explorers.get(ExplorerConst.TEMPLATE_EXP_TREE) as TemplateExp;
 }
 
 export { ModelExpTree, SystemTask };

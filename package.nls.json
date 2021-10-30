@@ -11,6 +11,7 @@
   "command.ibiz-modeling-studio.system.run-task.refresh": "Refresh System Background Tasks",
   "command.ibiz-modeling-studio.system.run-task.cancel": "Cancel Ongoing System Background Tasks",
   "command.ibiz-modeling-studio.template.publish": "Publish Template",
+  "command.ibiz-modeling-studio.template.open-git": "Open Template Code",
   "command.ibiz-modeling-studio.mos-fs.copy-path": "Copy Path",
   "command.ibiz-modeling-studio.mos-fs.open-file": "Open Model",
   "command.ibiz-modeling-studio.mos-fs.open-runtime": "Open Model Runtime",

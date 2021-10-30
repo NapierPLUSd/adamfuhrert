@@ -70,6 +70,36 @@ export class CoreAPI {
   }
 
   /**
+   * 获取模板地址
+   *
+   * @author chitanda
+   * @date 2022-01-21 13:01:43
+   * @static
+   * @param {string} templateId
+   * @return {*}  {Promise<string>}
+   */
+  static async getTemplateRepoUrl(templateId: string): Promise<string> {
+    if (ctx.completed === false) {
+      await ctx.waitCompleted();
+    }
+    try {
+      const config: AxiosRequestConfig<unknown> = {
+        headers: {
+          'content-type': 'application/json;charset=UTF-8',
+        },
+      };
+      const path = `${this.getAddress()}/psdevslntempls/${templateId}/getrepourl`;
+      const res = await Fetch.post(path, { psdevslnid: ctx.get('psdevsln') }, null, config);
+      if (res) {
+        return res.data.coderepourl;
+      }
+    } catch (err) {
+      showErrInfo(err);
+    }
+    return '';
+  }
+
+  /**
    * 查询当前系统运行
    *
    * @author chitanda

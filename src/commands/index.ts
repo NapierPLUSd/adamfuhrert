@@ -15,6 +15,7 @@ import { UserLoginCommand } from './user/login';
 import { UserLogoutCommand } from './user/logout';
 import { SystemRunTaskCommand } from './system-task/run';
 import { SystemRunMultipleTaskCommand } from './system-task/multiple';
+import { TemplateOpenGitCommand } from './template/open-git';
 
 /**
  * 安装命令处理程序
@@ -46,6 +47,7 @@ export function installCommands(_context: ExtensionContext): void {
   }
   // 模板相关
   {
+    new TemplateOpenGitCommand();
     new TemplatePublishCommand();
   }
   // 用户相关
