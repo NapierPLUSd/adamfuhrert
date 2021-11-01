@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
 import { TemplatePublishCommand } from '../../../commands/template/publish';
+import { TemplateOpenGitCommand } from '../../../commands/template/open-git';
 
 /**
  * 模板相关指令集
@@ -24,6 +25,7 @@ export class TemplateConst {
    *
    * @author chitanda
    * @date 2022-01-21 14:01:18
+   * @see 实现 {@link TemplateOpenGitCommand.execute}
    */
   readonly OPEN_GIT = 'ibiz-modeling-studio.template.open-git';
 }

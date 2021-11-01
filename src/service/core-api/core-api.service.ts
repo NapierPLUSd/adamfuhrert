@@ -32,7 +32,7 @@ export class CoreAPI {
       'content-type': 'application/json;charset=UTF-8',
     };
     try {
-      const res = await Fetch.post(this.getAddress() + '/pstscmds/null/' + (api ? api.toLocaleLowerCase() : ''), data, config);
+      const res = await Fetch.post(this.getAddress() + '/pstscmds/null/' + (api ? api.toLocaleLowerCase() : ''), data, null, config);
       return res;
     } catch (err: any) {
       showErrInfo(err);

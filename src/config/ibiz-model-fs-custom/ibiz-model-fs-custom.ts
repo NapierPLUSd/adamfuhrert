@@ -25,6 +25,11 @@ export class IBizModelFSCustomConfig {
           name: 'pssysermaps',
           logicName: '实体模型看板',
         },
+        {
+          path: '/pssyscanvases',
+          name: 'pssyscanvases',
+          logicName: '画布',
+        },
         // {
         //   path: '/pssyssfpubs',
         //   name: 'pssyssfpubs',

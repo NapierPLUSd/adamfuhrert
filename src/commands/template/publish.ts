@@ -1,6 +1,5 @@
 import { commands, ProgressLocation, window } from 'vscode';
 import { CommandConst } from '../../constants';
-import { TemplatePickItem } from '../../entities';
 import { CoreAPI } from '../../service';
 
 /**

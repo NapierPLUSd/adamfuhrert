@@ -54,6 +54,8 @@ export class DesignToolUrl {
     PSDEDATAQUERY: '/dataquery-design/#/home/___instance___/psdedataqueries/___srfkey___/views/design',
     // 应用菜单
     PSAPPMENU: `/appmenu-design/#/appmenudesign/___instance___/psappmenus/___srfkey___/views/design`,
+    // 画布
+    PSSYSCANVAS: `/canvas-design/#/home/___instance___/pssyscanvas/___srfkey___/views/design`,
   };
 
   /**
