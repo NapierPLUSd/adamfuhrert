@@ -10,6 +10,21 @@
 - 命令(Command)
   - 搜索实体视图（Search Entity View）：ibiz-modeling-studio.mos-fs.search-entity-view
 
+## [0.0.10] - 2022-01-21
+
+### Added
+
+- explorer
+  - 新增模板树
+
+- 命令(Command)
+  - 打开模板 git （Open Template Code）：ibiz-modeling-studio.template.open-git
+
+### Changed
+
+- explorer
+  - 发布模板从后台任务菜单中，转到模板树当中。
+
 ## [0.0.9] - 2021-12-22
 
 ### Added
