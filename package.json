@@ -4,7 +4,7 @@
   "description": "iBiz建模工场",
   "publisher": "ibizlab",
   "preview": true,
-  "version": "0.0.9",
+  "version": "0.0.10",
   "engines": {
     "vscode": "^1.63.0"
   },
@@ -224,13 +224,13 @@
         {
           "command": "ibiz-modeling-studio.system.publish.code",
           "when": "view == ibiz-modeling-studio-explorer.system-task",
-          "group": "navigation@40"
+          "group": "1_ibiz_modeling_system_run_task"
         }
       ],
       "view/item/context": [
         {
           "command": "ibiz-modeling-studio.gitlab.open-wiki",
-          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree && viewItem == MODEL && false",
+          "when": "view == ibiz-modeling-studio-explorer.model-exp-tree && viewItem == MODEL",
           "group": "inline@10"
         },
         {
